@@ -1,0 +1,78 @@
+// tabs 
+/* Tabs : Simple 
+------------------------------------
+*/
+
+.nav-tabs-simple {
+  border-bottom: 0px;
+  &:after {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+    bottom: 3px;
+    z-index: 120;
+  }
+  & > li {
+    margin-bottom: 0;
+    &:after {
+      @include transition(all 0.1s linear 0s);
+      -webkit-backface-visibility: hidden;
+      width: 100%;
+      display: block;
+      background-color: $color-primary;
+      height: 0px;
+      content: '';
+      z-index: 125;
+    
+    &.active a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border-color: $color-primary;
+      }
+    }
+    &.active,
+    &:hover {
+      &:after {
+        height: 3px;
+      }
+    }
+  }
+  
+
+  &.nav-tabs-left,
+  &.nav-tabs-right {
+    &:after {
+      border-bottom: 0px;
+    }
+    & > li {
+      &:after {
+        width: 0px;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+      }
+      &.active,
+      &:hover {
+        &:after {
+          width: 3px;
+        }
+      }
+    }
+    & ~ .tab-content {
+    }
+  }
+  &.nav-tabs-left {
+    & > li:after {
+      right: 0;
+    }
+  }
+  &.nav-tabs-right {
+    & > li:after {
+      left: 0;
+    }
+  }
+}
+}

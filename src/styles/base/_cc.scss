@@ -1,0 +1,128 @@
+//credit card svgs
+
+.cc {
+	display: inline-block;
+	height: 48px;
+	width: 48px;
+	background-image: url(/images/cc.svg);
+	background-repeat: no-repeat;
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+}
+
+.cc.business-color_CHECK {
+	background-position: 0px 0px;
+}
+.cc.cards-color_AMEX {
+	background-position: 0px -48px;
+}
+.cc.cards-color_DINE {
+	background-position: 0px -96px;
+}
+.cc.cards-color_DISC {
+	background-position: 0px -144px;
+}
+.cc.cards-color_JCB {
+	background-position: 0px -192px;
+}
+.cc.cards-color_maestro {
+	background-position: 0px -240px;
+}
+.cc.cards-color_MAST {
+	background-position: 0px -288px;
+}
+.cc.cards-color_VISA {
+	background-position: 0px -336px;
+}
+
+
+// Data grid tools SVG
+.co-tools {
+	display: inline-block;
+	height: 24px;
+	width: 24px;
+	background-image: url(../images/co-tools.svg);
+	background-repeat: no-repeat;
+	transform: scale(0.7);
+
+
+	&.refresh {
+		background-position: 0px 0px;
+		&:hover {
+			background-position: 0px -264px;
+		}
+	}
+
+
+	&.bullet-list {
+		background-position: 0px -48px;
+		&:hover {
+			background-position: 0px -312px;
+		}
+	}
+
+	&.preferences {
+		background-position: 0px -96px;
+		&:hover {
+			background-position: 0px -360px;
+		}
+
+	}
+
+	.ui-1_eye-17 {
+		background-position: 0px -72px;
+	}
+	
+	.ui-1_preferences-circle {
+		background-position: 0px -120px;
+	}
+	.ui-1_preferences-circle-rotate {
+		background-position: 0px -144px;
+	}
+	.ui-1_preferences-rotate {
+		background-position: 0px -168px;
+	}
+	.ui-2_grid-48 {
+		background-position: 0px -192px;
+	}
+	.ui-2_menu-bold {
+		background-position: 0px -216px;
+	}
+
+	&.funnel {
+		background-position: 0px -240px;
+			&:hover {
+			background-position: 0px -504px;
+		}
+	}
+
+	//hover
+	
+	.design-2_microsoft:hover {
+		background-position: 0px -288px;
+	}
+	
+	.ui-1_eye-17:hover {
+		background-position: 0px -336px;
+	}
+	.ui-1_preferences:hover {
+		background-position: 0px -360px;
+	}
+	.ui-1_preferences-circle:hover {
+		background-position: 0px -384px;
+	}
+	.ui-1_preferences-circle-rotate:hover {
+		background-position: 0px -408px;
+	}
+	.ui-1_preferences-rotate:hover {
+		background-position: 0px -432px;
+	}
+	.ui-2_grid-48:hover {
+		background-position: 0px -456px;
+	}
+	.ui-2_menu-bold:hover {
+		background-position: 0px -480px;
+	}
+
+}

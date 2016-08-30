@@ -1,0 +1,57 @@
+// List
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+dl,
+ol,
+ul {
+  margin-top: 0;
+  padding-left: 0;
+  dl {}
+  ul,
+  ol {
+    font-size: 90%;
+    margin: 1.5rem 0 1.5rem 3rem;
+  }
+}
+
+dl {
+  list-style: none;
+}
+
+ul {
+//   list-style: circle inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+dt,
+dd,
+li {
+  margin-bottom: 1rem;
+}
+
+
+
+// transaction detail
+
+.transaction-detail {
+  &--list {
+    display: flex;
+    flex-direction: column;
+    
+    & > li {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      span {
+        &:first-child {
+          font-weight: bold;
+        }
+        &:nth-child(2) {
+        }
+      }
+    }
+  }
+}

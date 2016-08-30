@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="528px" viewBox="0 0 24 528"><g  transform="translate(0, 0)">
+<path data-cap="butt" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-miterlimit="10" d="M22,12c0,5.5-4.5,10-10,10&#10;&#9;S2,17.5,2,12S6.5,2,12,2c3.9,0,7.3,2.2,8.9,5.5"/>
+<polyline fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="21.8,1.7 21,7.6 &#10;&#9;15,6.8 "/>
+</g><g  transform="translate(0, 24)">
+<rect x="1" y="1" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="9" height="9"/>
+<rect data-color="color-2" x="14" y="1" transform="matrix(-1 -4.486867e-11 4.486867e-11 -1 37 11)" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="9" height="9"/>
+<rect data-color="color-2" x="1" y="14" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="9" height="9"/>
+<rect x="14" y="14" transform="matrix(-1 -4.486867e-11 4.486867e-11 -1 37 37)" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="9" height="9"/>
+</g><g  transform="translate(0, 48)">
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="10" y1="4" x2="22" y2="4"/>
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="10" y1="12" x2="22" y2="12"/>
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="10" y1="20" x2="22" y2="20"/>
+<rect x="2" y="2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="2" y="10" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="2" y="18" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+</g><g  transform="translate(0, 72)">
+<path fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M2,12c0,0,4-7,10-7&#10;&#9;c6,0,10,7,10,7s-4,7-10,7C6,19,2,12,2,12z"/>
+<circle data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="12" cy="12" r="3"/>
+</g><g  transform="translate(0, 96)">
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="4" x2="23" y2="4"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="4" x2="4" y2="4"/>
+<rect x="4" y="1" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="6"/>
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="22" y1="12" x2="23" y2="12"/>
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="12" x2="14" y2="12"/>
+<rect data-color="color-2" x="14" y="9" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="6"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="20" x2="23" y2="20"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="20" x2="4" y2="20"/>
+<rect x="4" y="17" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="6"/>
+</g><g  transform="translate(0, 120)">
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="14" y1="4" x2="23" y2="4"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="4" x2="4" y2="4"/>
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="22" y1="12" x2="23" y2="12"/>
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="12" x2="12" y2="12"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="14" y1="20" x2="23" y2="20"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="20" x2="4" y2="20"/>
+<circle fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="7" cy="4" r="3"/>
+<circle data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="15" cy="12" r="3"/>
+<circle fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="7" cy="20" r="3"/>
+</g><g  transform="translate(0, 144)">
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="4" y1="10" x2="4" y2="1"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="4" y1="23" x2="4" y2="20"/>
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="2" x2="12" y2="1"/>
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="23" x2="12" y2="12"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="20" y1="10" x2="20" y2="1"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="20" y1="23" x2="20" y2="20"/>
+<circle fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="4" cy="17" r="3"/>
+<circle data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="12" cy="9" r="3"/>
+<circle fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="20" cy="17" r="3"/>
+</g><g  transform="translate(0, 168)">
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="4" y1="12" x2="4" y2="1"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="4" y1="23" x2="4" y2="20"/>
+<rect x="1" y="16" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="6" height="4"/>
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="2" x2="12" y2="1"/>
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="23" x2="12" y2="10"/>
+<rect data-color="color-2" x="9" y="6" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="6" height="4"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="20" y1="12" x2="20" y2="1"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="20" y1="23" x2="20" y2="20"/>
+<rect x="17" y="16" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="6" height="4"/>
+</g><g  transform="translate(0, 192)">
+<rect x="1" y="1" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="1" y="10" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect data-color="color-2" x="1" y="19" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="10" y="1" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect data-color="color-2" x="10" y="10" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="10" y="19" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect data-color="color-2" x="19" y="1" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="19" y="10" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="19" y="19" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+</g><g  transform="translate(0, 216)">
+<rect data-color="color-2" x="1" y="10" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="22" height="4"/>
+<rect x="1" y="2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="22" height="4"/>
+<rect x="1" y="18" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="22" height="4"/>
+</g><g  transform="translate(0, 240)">
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="4" y1="9" x2="20" y2="9"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="3" x2="23" y2="3"/>
+<line fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="7" y1="15" x2="17" y2="15"/>
+<line data-color="color-2" fill="none" stroke="#b9b9b9" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="10" y1="21" x2="14" y2="21"/>
+</g><g  transform="translate(0, 264)">
+<path data-cap="butt" fill="none" stroke="#199ddc" stroke-width="2" stroke-miterlimit="10" d="M22,12c0,5.5-4.5,10-10,10&#10;&#9;S2,17.5,2,12S6.5,2,12,2c3.9,0,7.3,2.2,8.9,5.5"/>
+<polyline fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="21.8,1.7 21,7.6 &#10;&#9;15,6.8 "/>
+</g><g  transform="translate(0, 288)">
+<rect x="1" y="1" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="9" height="9"/>
+<rect data-color="color-2" x="14" y="1" transform="matrix(-1 -4.486867e-11 4.486867e-11 -1 37 11)" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="9" height="9"/>
+<rect data-color="color-2" x="1" y="14" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="9" height="9"/>
+<rect x="14" y="14" transform="matrix(-1 -4.486867e-11 4.486867e-11 -1 37 37)" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="9" height="9"/>
+</g><g  transform="translate(0, 312)">
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="10" y1="4" x2="22" y2="4"/>
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="10" y1="12" x2="22" y2="12"/>
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="10" y1="20" x2="22" y2="20"/>
+<rect x="2" y="2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="2" y="10" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="2" y="18" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+</g><g  transform="translate(0, 336)">
+<path fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M2,12c0,0,4-7,10-7&#10;&#9;c6,0,10,7,10,7s-4,7-10,7C6,19,2,12,2,12z"/>
+<circle data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="12" cy="12" r="3"/>
+</g><g  transform="translate(0, 360)">
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="4" x2="23" y2="4"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="4" x2="4" y2="4"/>
+<rect x="4" y="1" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="6"/>
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="22" y1="12" x2="23" y2="12"/>
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="12" x2="14" y2="12"/>
+<rect data-color="color-2" x="14" y="9" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="6"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="20" x2="23" y2="20"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="20" x2="4" y2="20"/>
+<rect x="4" y="17" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="6"/>
+</g><g  transform="translate(0, 384)">
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="14" y1="4" x2="23" y2="4"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="4" x2="4" y2="4"/>
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="22" y1="12" x2="23" y2="12"/>
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="12" x2="12" y2="12"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="14" y1="20" x2="23" y2="20"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="20" x2="4" y2="20"/>
+<circle fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="7" cy="4" r="3"/>
+<circle data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="15" cy="12" r="3"/>
+<circle fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="7" cy="20" r="3"/>
+</g><g  transform="translate(0, 408)">
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="4" y1="10" x2="4" y2="1"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="4" y1="23" x2="4" y2="20"/>
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="2" x2="12" y2="1"/>
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="23" x2="12" y2="12"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="20" y1="10" x2="20" y2="1"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="20" y1="23" x2="20" y2="20"/>
+<circle fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="4" cy="17" r="3"/>
+<circle data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="12" cy="9" r="3"/>
+<circle fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="20" cy="17" r="3"/>
+</g><g  transform="translate(0, 432)">
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="4" y1="12" x2="4" y2="1"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="4" y1="23" x2="4" y2="20"/>
+<rect x="1" y="16" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="6" height="4"/>
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="2" x2="12" y2="1"/>
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="23" x2="12" y2="10"/>
+<rect data-color="color-2" x="9" y="6" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="6" height="4"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="20" y1="12" x2="20" y2="1"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="20" y1="23" x2="20" y2="20"/>
+<rect x="17" y="16" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="6" height="4"/>
+</g><g  transform="translate(0, 456)">
+<rect x="1" y="1" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="1" y="10" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect data-color="color-2" x="1" y="19" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="10" y="1" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect data-color="color-2" x="10" y="10" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="10" y="19" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect data-color="color-2" x="19" y="1" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="19" y="10" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+<rect x="19" y="19" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="4" height="4"/>
+</g><g  transform="translate(0, 480)">
+<rect data-color="color-2" x="1" y="10" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="22" height="4"/>
+<rect x="1" y="2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="22" height="4"/>
+<rect x="1" y="18" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="22" height="4"/>
+</g><g  transform="translate(0, 504)">
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="4" y1="9" x2="20" y2="9"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="3" x2="23" y2="3"/>
+<line fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="7" y1="15" x2="17" y2="15"/>
+<line data-color="color-2" fill="none" stroke="#199ddc" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="10" y1="21" x2="14" y2="21"/>
+</g></svg>

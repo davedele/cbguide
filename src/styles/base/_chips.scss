@@ -1,0 +1,156 @@
+// Material Chips
+//-------------------
+// SVG "x" icon 
+// <svg version="1.1" x="0px" y="0px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><g><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path></g></svg>
+//-------------------------------------------
+
+
+.sc-chips-select {
+    font-size: 13px;
+    vertical-align: middle;
+    cursor: text;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: center;
+    padding-left: $block-sixth;
+    .sc-chip {
+        cursor: default;
+        font-size: 1.1rem;
+        border-radius: $border-rad;
+        display: flex;
+        align-items: center;
+        height: 28px;
+        color: $white;
+        margin: $block-sixth $block-fifth 0 0;
+        padding-left: 12px;
+        position: relative;
+        z-index: 6;
+        cursor: pointer;
+
+        .sc-chip-content {
+            display: flex;
+            padding-right: 4px;
+            align-items: center;
+
+            i {
+                font-size: 1.8rem;
+                margin-left: $block-eighth;
+            }
+        }
+        .sc-remove {
+            padding: 0 0.5rem;
+            border-left: 2px solid white;   
+
+            i {
+                color: #ffffff;
+                font-size: 1.5rem;
+            }
+        }
+        .remove {
+                height: 13px;
+                width: 13px;
+                position: absolute;
+                top: 0;
+                background: $color-danger;
+                border: 2px solid transparent;
+                border-radius: 50%;
+            svg {
+                fill: white;
+            }
+        }
+    }
+}
+
+
+text-filter {
+    position: relative;
+}
+
+.pill-container {
+    position: relative;
+    margin-right: 1rem;
+}
+.pill-menu {
+    background: $white;
+    position: absolute;
+    z-index: 10;
+    border-radius: $border-rad;
+    border: 1px solid #e3e8ee;
+    &:after {
+    }
+
+    & > form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-title {
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid #e3e8ee;
+        margin-bottom: 0;
+    }
+    .pill-content {
+        padding: 1rem;
+        border: none;
+
+        input {
+            border: 1px solid #e3e8ee; 
+        }
+    }
+
+    .pill-footer {
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+
+        & button {
+            border-top: 1px solid #e3e8ee;
+            margin-bottom: 0;
+            &:first-child {
+                margin-right: $block-sixth;
+            }
+        }
+    }
+
+
+    ul {
+        li {
+            min-width: 120px;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0;
+
+            input {
+                    margin-right: 1rem;
+            }
+            &:hover {
+                background-color: rgba(211, 211, 211, 0.33);
+            } 
+        }
+    }
+}
+
+
+.multi-select-container {
+    @extend .pill-container;
+}
+
+.multi-select-menu {
+    @extend .pill-menu;
+}
+
+
+checkbox-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    input {
+        margin-right: 1rem;
+
+    }
+    
+}

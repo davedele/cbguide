@@ -1,0 +1,141 @@
+apis {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.create-api-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding-right: 12rem;
+    .api-info {
+       margin-bottom: $block-half;
+       
+       h5 {
+       position: relative;
+       margin-bottom: $block-third;
+       &:after {
+            content: "";
+            height: 2px;
+            border-radius: 60px;
+            position: absolute;
+            width: 60px;
+            top: 44px;
+            left: 0;
+            background: $color-primary;
+           }
+       }
+       p{
+           max-width: 500px;
+       } 
+       
+    }
+    .create-wrap {
+        display: flex;
+        flex-direction: column;
+        .create-api-forms {
+            display: flex;
+            flex-direction: column;
+            
+            & > .form-group {
+                 min-width: 200px;
+                 margin-bottom: $block-half;
+                &:last-child {
+                   
+                }
+            }
+        
+        }
+    }
+    
+}
+
+.api-content-divider {
+    display: block;
+    width: 1px;
+    height: 500px;
+    background-color: lightgray;
+}
+
+.generated-api-content {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            /* justify-content: space-between; */
+            flex-direction: column;
+        
+    .no-keys {
+        text-align: center;
+        background: whitesmoke;
+        border-radius: 100%;
+        height: 350px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        max-height: 500px;
+        visibility: visible;
+        & > * {
+            opacity: 1;
+            transition: 0.3s all cubic-bezier(0.28, 0.55, 0.385, 1.65);
+            i {font-size: 48px; transition-delay: .2s}
+            
+            h4 {transition-delay: .1s}
+        }
+    }
+    
+    .generated-keys {
+        // opacity: 0;
+        // visibility: hidden;
+        // max-height: 0;
+        // transition: 0.3s all cubic-bezier(0.28, 0.55, 0.385, 1.65);
+    }  
+    
+    &.active {
+        
+        .generated-keys {
+            // max-height: 500px;
+            // opacity: 1;
+            // visibility: visible;
+            // flex-direction: column;
+            // padding-left: $block-full;
+            // transition: 0.3s all cubic-bezier(0.28, 0.55, 0.385, 1.65);
+        }
+        
+        .no-keys {
+        // opacity: 0;
+        //     max-height: 0;
+        // visibility: hidden;
+        // transition: 0.3s all cubic-bezier(0.28, 0.55, 0.385, 1.65);
+        } 
+    }
+}
+
+
+.create-api-buttons {
+    display: flex;
+    max-width: 500px;
+    margin-left: $block-half;
+}
+
+.submit-btn-api {
+  background: $color-primary;
+}
+
+
+
+// gen api key form
+.api-id {
+    width: auto;
+    input {
+        flex: 1 1 auto;
+        height: auto;
+    }
+    button{
+        margin-bottom: 0;
+    }
+
+}

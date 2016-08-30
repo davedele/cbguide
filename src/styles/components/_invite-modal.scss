@@ -1,0 +1,116 @@
+.invitations {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    z-index: 99;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+.invite-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparentize($black, 0.30);
+     transition: 300ms ease all;  
+    z-index: 999;
+}
+
+.invite-container {
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    margin-bottom: 0;
+    min-width: 400px;
+    width: 400px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    position: relative;
+    top: -20%;
+    
+   .invite-card {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: $white;
+        overflow: hidden;
+        padding: $block-third $block-third $block-sixth;
+        border-radius: $border-rad;
+        border: 1px solid #ECECEC;
+        box-shadow: 0 4px 30px 1px rgba(0, 0, 0, 0.1);
+        
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform-origin: 50% -50%;
+        transform-origin: 50% -50%;
+        
+        &:first-child {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        &:nth-child(2) {
+            -webkit-transform: scale(.9);
+            transform: scale(.9);
+        }
+        &:nth-child(3) {
+            -webkit-transform: scale(.8);
+            transform: scale(.8);
+        }
+        
+        .lnr-envelope {
+            position: absolute;
+            font-size: 470px;
+            color: #F9F9F9;
+            top: -80px;
+            left: 140px;
+            transform: rotate(18.2deg);
+
+        }
+    }
+}
+
+
+invitation {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: baseline;
+    z-index: 1;
+    
+
+    
+    .invite-message {
+        margin-top: $block-fourth;
+        flex: 1 1 auto;
+        
+        //TODO:
+        .badge {
+            color: white;
+            text-align: center;
+            margin: 0.5rem;
+            padding: 0.1rem 1rem;
+            font-size: 12px;
+            font-weight: 400;
+            border-radius: 0.28625rem;
+            background-color: $color-primary;
+        }
+    }
+    
+    .invite-actions {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-between;
+        align-self: stretch;
+        border-top: 1px solid #EAE9E9;
+        padding-top: $block-fourth;
+    }
+}
+

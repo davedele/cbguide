@@ -1,0 +1,147 @@
+cfo-create {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.cfo-container {
+    display: flex;
+    flex: 1 1 auto
+  
+}
+
+step-manager {
+    display: flex;
+    flex: 1 1 auto;
+    
+    .step-indicator {
+        
+        li {
+            margin-bottom: 3.6rem;
+            .step {
+             
+                
+                &.active {
+             
+                }
+            }
+        }
+        
+        button {
+            i {
+                color: $white;
+            }
+        }
+    }
+}
+
+aside.cfo-steps {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -25px -10px 43px 20px rgba(0, 0, 0, 0.19);
+    flex-basis: 280px;
+    position: relative;
+    z-index: 1;
+}
+
+section.cfo-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.cfo-forms {
+    padding-left:0 !important;
+    padding-right: 0 !important;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    
+   & > form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+   }
+}
+
+
+.cfo-create {
+        width: 100%;
+        justify-content: space-between;
+    & > button {
+        margin-bottom: 0
+    }
+}
+
+
+//run sidebar 
+.cfo-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2; 
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 400ms cubic-bezier($menu-bezier); 
+    transition: all 400ms cubic-bezier($menu-bezier); 
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        z-index: 11; 
+        -webkit-transition: all 400ms cubic-bezier($menu-bezier); 
+        transition: all 400ms cubic-bezier($menu-bezier); 
+    }
+}
+
+// todo:
+.no-margin {
+   
+}
+
+@keyframes slide-out-right {
+    0% {
+        
+    }
+    
+    50% {
+        
+        
+    }
+    
+    100% {
+        
+        
+    }
+}
+
+
+
+//cfo forms
+td.move-row {
+  button {
+      padding: 0 0.5rem;
+      margin-bottom: 0;
+  }  
+}
+
+
+cfo-history {
+    display: flex;
+    flex: 1 1 auto;
+   border-left: 1px solid lightgray;
+
+    thead {
+        height: 54px;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}

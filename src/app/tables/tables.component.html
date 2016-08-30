@@ -1,0 +1,303 @@
+<header class="sc-subheader">
+  <div class="sh-content">
+
+    <div class="sh-bc"><span class="hint-text small"><a>Home</a></span> <span class="text-small current">{{title}}</span></div>
+
+    <div class="sh-action">
+      <h3 class="home-crumb">{{title}}</h3>
+      <button type="butotn" class="button-sc"> <i class="material-icons">add</i> Action button</button>
+    </div>
+
+  </div>
+</header>
+
+<div class="main-content">
+  <div class="grid-content-container">
+
+    <data-grid>
+      <header class="data-table-tools">
+        <div class="search">
+
+          <fieldset class="field-container">
+            <input class="grid-search ng-untouched ng-pristine ng-valid" id="nameField" type="text" placeholder="Search by last four digits">
+
+            <div class="icons-container">
+              <div class="icon-search"><i class="material-icons">search</i></div>
+              <div class="icon-close">
+                <i class="material-icons">close</i>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <div class="table-config">
+
+
+
+          <div class="sc-generate-wrap" style="display: none">
+            <copy-data placeholder="Webhook Key">
+              <div class="field-container">
+                <input class="form-control ng-pristine ng-valid ng-touched" name="copyText" placeholder="This stuff gets copied.." readonly=""
+                  type="text">
+                <div class="copy-icons-container left-justify">
+                  <i class="material-icons">remove_red_eye</i>
+                </div>
+              </div>
+            </copy-data>
+          </div>
+
+
+
+          <div class="tool-btn-group">
+            <button class="btn-ops" data-tootik="Card View" data-tootik-conf="top invert shadow square"><i class="material-icons">filter_none</i></button>
+            <button class="btn-ops" data-tootik="List view" data-tootik-conf="top invert shadow square no-arrow"><i class="material-icons">format_list_bulleted</i></button>
+          </div>
+
+          <div class="vert-pipe"></div>
+
+          <div class="tool-btn-group">
+            <button class="btn-ops" data-tootik="Settings" data-tootik-conf="top invert shadow square no-arrow"><i class="material-icons">layers</i></button>
+          </div>
+
+          <div class="vert-pipe"></div>
+
+          <div class="tool-btn-group">
+            <button class="btn-ops" data-tootik="Refresh" data-tootik-conf="top invert shadow square no-arrow"><i class="material-icons">refresh</i></button>
+          </div>
+
+        </div>
+
+      </header>
+
+
+      <div class="sc-data-table">
+
+        <header class="table-ops border-rad filter-area">
+
+          <div class="sc-chips-select">
+
+
+            <multi-select-filter [hidden]="!showPill1">
+              <div class="pill-container" clickedoutside="">
+                <filter-pill class="sc-chip bg-success">
+
+                  <span class="sc-chip-content">Pill One<i class="arrow material-icons text-white">keyboard_arrow_down</i></span>
+                  <a class="sc-remove" (click)="showPill1 = false">
+                    <i class="material-icons">close</i>
+                  </a>
+                </filter-pill>
+
+              </div>
+            </multi-select-filter>
+
+            <multi-select-filter [hidden]="!showPill2">
+              <div class="pill-container" clickedoutside="">
+                <filter-pill class="sc-chip bg-warning">
+
+                  <span class="sc-chip-content">Pill Two<i class="arrow material-icons text-white">keyboard_arrow_down</i></span>
+                  <a class="sc-remove">
+                    <i class="material-icons">close</i>
+                  </a>
+                </filter-pill>
+
+              </div>
+            </multi-select-filter>
+
+            <multi-select-filter [hidden]="!showPill3">
+              <div class="pill-container" clickedoutside="">
+                <filter-pill class="sc-chip bg-info">
+
+                  <span class="sc-chip-content">Pill Three<i class="arrow material-icons text-white">keyboard_arrow_down</i></span>
+                  <a class="sc-remove">
+                    <i class="material-icons">close</i>
+                  </a>
+                </filter-pill>
+
+              </div>
+            </multi-select-filter>
+
+            <multi-select-filter [hidden]="!showPill4">
+              <div class="pill-container" clickedoutside="">
+                <filter-pill class="sc-chip bg-complete">
+
+                  <span class="sc-chip-content">Pill Four<i class="arrow material-icons text-white">keyboard_arrow_down</i></span>
+                  <a class="sc-remove">
+                    <i class="material-icons">close</i>
+                  </a>
+                </filter-pill>
+
+              </div>
+            </multi-select-filter>
+
+          </div>
+
+          <button (click)="showFilterSort = !showFilterSort" class="btn-ops"><i class="co-tools funnel"></i></button>
+        </header>
+
+        <div [ngClass]='{active : showFilterSort}' class="filter-sort">
+
+          <div class="row">
+
+            <div class="col-sm-3">
+              <div class="filter-list">
+                <div class="filter-list--header">
+                  <h5 class="title">Filter</h5>
+
+                </div>
+
+                <div class="form-group">
+                  <div class="checkbox check-success">
+                    <input id="checkboxCC" (change)="showPill1=!showPill1" type="checkbox">
+                    <label for="checkboxCC">Pill One </label>
+                  </div>
+
+                  <div class="checkbox check-warning">
+                    <input id="checkboxCC2" (change)="showPill2=!showPill2" type="checkbox">
+                    <label for="checkboxCC2">Pill Two </label>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="filter-list">
+                <div class="filter-list--header">
+                  <h5 class="title">Filter</h5>
+
+                </div>
+
+                <div class="form-group">
+                  <div class="checkbox check-info">
+                    <input id="checkboxCC3" (change)="showPill3=!showPill3" type="checkbox">
+                    <label for="checkboxCC3">Pill Three </label>
+                  </div>
+
+                  <div class="checkbox check-complete">
+                    <input id="checkboxCC4" (change)="showPill4=!showPill4" type="checkbox">
+                    <label for="checkboxCC4">Pill Four </label>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="table-responsive-vertical">
+          <table class="table flex-height table-hover table-mc-light-blue">
+            <thead list-view-header="">
+              <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Amount</th>
+                <th>Amount</th>
+                <th>Amount</th>
+                <th>Amount</th>
+                <th>Last 4</th>
+                <th>Amount</th>
+
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody class="list-view">
+
+              <tr>
+                <td data-title="Date"><span class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Type"><span class="status transaction-type--10"></span></td>
+                <td data-title="Status"><span class="status transaction-status--declined">declined</span></td>
+                <td class="data-table-menu">
+                  <datagrid-actions>
+                    <div>
+                      <div class="more" clickedoutside=""><i class="material-icons">more_vert</i></div>
+                    </div>
+                  </datagrid-actions>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-title="Date"><span class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Type"><span class="status transaction-type--10"></span></td>
+                <td data-title="Status"><span class="status transaction-status--declined">declined</span></td>
+                <td class="data-table-menu">
+                  <datagrid-actions>
+                    <div>
+                      <div class="more" clickedoutside=""><i class="material-icons">more_vert</i></div>
+                    </div>
+                  </datagrid-actions>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-title="Date"><span class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Amount">$5.00</td>
+                <td data-title="Type"><span class="status transaction-type--10"></span></td>
+                <td data-title="Status"><span class="status transaction-status--declined">declined</span></td>
+                <td class="data-table-menu">
+                  <datagrid-actions>
+                    <div>
+                      <div class="more" clickedoutside=""><i class="material-icons">more_vert</i></div>
+                    </div>
+                  </datagrid-actions>
+                </td>
+              </tr>
+
+            </tbody>
+
+
+            <tfoot class="table-ops">
+              <div class="pagi-item-count">102 items</div>
+              <pagination class="pagination">
+                <div class="arrow-l" id="prev-page">
+                  <i class="material-icons">first_page</i>
+                </div>
+                <div class="arrow-l" id="prev-page">
+                  <i class="material-icons">chevron_left</i>
+                </div>
+                <span id="count-info">1/9</span>
+                <div class="arrow-r" id="next-page">
+                  <i class="material-icons">chevron_right</i>
+                </div>
+                <div class="arrow-r" id="next-page">
+                  <i class="material-icons">last_page</i>
+                </div>
+              </pagination>
+
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+    </data-grid>
+
+
+
+
+  </div>
+
+
+</div>

@@ -1,0 +1,539 @@
+
+html{
+    font-size: $font-size-root;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body{
+    color: $color-master;
+    font-family: $body-font;
+    font-size: $font-size-base;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+}
+/* Headings 
+------------------------------------
+*/
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    margin: 10px 0;
+    
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    font-weight: 300;
+    color: $color-master-dark;
+}
+h1 {
+    font-size: $font-size-h1;
+    line-height: 2.75rem;
+    letter-spacing: -0.08px;
+}
+h2 {
+    font-size: $font-size-h2;
+    line-height: rem(40);
+}
+h3 {
+    font-size: $font-size-h3;
+    line-height: 3.4rem;
+}
+h4 {
+    font-size: $font-size-h4;
+    line-height: rem(31.88);
+}
+h5{
+    font-size: $font-size-h5;
+    line-height: rem(25.88);
+}
+h3 small, 
+h4 small, 
+h5 small {
+    font-weight: 300;
+}
+h1.block, 
+h2.block, 
+h3.block, 
+h4.block, 
+h5.block, 
+h6.block {
+    padding-bottom: 10px;
+}
+/* Lins and Others
+------------------------------------
+*/
+a {
+    text-shadow: none !important;
+    color: $color-primary;
+    transition: color 0.1s linear 0s,background-color 0.1s linear 0s,opacity 0.2s linear 0s !important;
+}
+a:focus, a:hover, a:active {
+    color: $color-primary;
+}
+a,a:focus, a:hover, a:active {
+    outline: 0 !important;
+    text-decoration: none;
+}
+a[ng-click] {
+    cursor: pointer;
+}
+br {
+   line-height: normal;
+   clear: both;
+}
+code{
+    color:$color-danger-dark;
+    background-color: $color-master-lighter;
+    &:hover {
+        background-color: $color-danger-lighter;
+    }
+}
+p {
+    display: block;
+    font-size: $font-size-p;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    line-height: 2rem;
+    margin: 0px 0px 10px 0px;
+    font-style: normal;
+    white-space: normal;
+}
+small, 
+.small{
+    // line-height: rem(18);
+}
+label {
+    &.inline {
+        display: inline-block;
+        position: relative;
+        top: 0px;
+        font-size: rem(13);
+    }
+}
+ul,ol {
+    & > li {
+        // padding-left: 3px;
+        // line-height: rem(24);
+    }
+    &.lg-icon{
+        & > li {
+            font-size: rem(21);
+            & span {
+                font-size: rem(14);
+            }
+        }
+    }
+    &.no-style{
+        list-style: none;
+        padding-left: 5px;
+    }
+}
+address {
+    margin-bottom: 0px;
+    a{
+        color:$color-master;
+    }
+}
+hr{
+  border-color:$color-master-light;
+  &.double{
+    border-width:2px;
+  }
+  &.dotted{
+    border-style:dotted none none;
+  }
+}
+
+/* Font Sizes 
+------------------------------------
+*/
+
+.small-text {
+    font-size: rem(12) !important;
+}
+.normal-text {
+    font-size: rem(13) !important;
+}
+.large-text {
+    font-size: rem(15) !important;
+}
+
+/* Font Weights
+------------------------------------
+ */
+
+.normal {
+    font-weight: normal;
+}
+.semi-bold {
+    font-weight: 400 !important;
+}
+.bold {
+    font-weight: bold !important;
+}
+.light {
+    font-weight: 300 !important;
+}
+
+
+// Misc 
+//------------------------------------
+
+.all-caps {
+    text-transform: uppercase;
+}
+.muted {
+    color: lighten($color-master,50%);
+}
+.hint-text{
+    opacity: .7;
+}
+.no-decoration{
+    text-decoration:none !important;
+}
+
+// Monochrome Colors
+//------------------------------------
+
+
+.bg-master{
+    background-color: $color-master;
+}
+.bg-master-light{
+    background-color: $color-master-light;
+}
+.bg-master-lighter{
+    background-color: $color-master-lighter;
+}
+.bg-master-lightest{
+    background-color: $color-master-lightest;
+}
+.bg-master-dark{
+    background-color: $color-master-dark;
+}
+.bg-master-darker{
+    background-color: $color-master-darker;
+}
+.bg-master-darkest{
+    background-color: $color-master-darkest;
+}
+
+
+// Primary
+//------------------------------------
+
+.bg-primary {
+    background-color: $color-primary;
+}
+.bg-primary-dark {
+    background-color: $color-primary-dark;
+}
+.bg-primary-darker {
+    background-color: $color-primary-darker;
+}
+.bg-primary-light {
+    background-color: $color-primary-light;
+}
+.bg-primary-lighter {
+    background-color: $color-primary-lighter;
+}
+
+//* Complete 
+//------------------------------------
+
+.bg-complete {
+    background-color: $color-complete;
+}
+.bg-complete-dark {
+    background-color: $color-complete-dark;
+}
+.bg-complete-darker {
+    background-color: $color-complete-darker;
+}
+.bg-complete-light {
+    background-color: $color-complete-light;
+}
+.bg-complete-lighter {
+    background-color: $color-complete-lighter;
+}
+
+/* Success 
+------------------------------------
+*/
+.bg-success {
+    background-color: $color-success;
+}
+.bg-success-dark {
+    background-color: $color-success-dark;
+}
+.bg-success-darker {
+    background-color: $color-success-darker;
+}
+.bg-success-light {
+    background-color: $color-success-light;
+}
+.bg-success-lighter {
+    background-color: $color-success-lighter;
+}
+
+/* Info
+------------------------------------
+*/
+.bg-info{
+    background-color: $color-info;
+}
+.bg-info-dark{
+    background-color: $color-info-dark;
+}
+.bg-info-darker{
+    background-color: $color-info-darker;
+}
+.bg-info-light{
+    background-color: $color-info-light;
+}
+.bg-info-lighter{
+    background-color: $color-info-lighter;
+}
+
+/* Danger 
+------------------------------------
+*/
+.bg-danger {
+    background-color: $color-danger;
+}
+.bg-danger-dark {
+    background-color: $color-danger-dark;
+}
+.bg-danger-darker {
+    background-color: $color-danger-darker;
+}
+.bg-danger-light {
+    background-color: $color-danger-light;
+}
+.bg-danger-lighter {
+    background-color: $color-danger-lighter;
+}
+
+/* Warning
+------------------------------------
+ */
+.bg-warning {
+    background-color: $color-warning;
+}
+.bg-warning-dark {
+    background-color: $color-warning-dark;
+}
+.bg-warning-darker {
+    background-color: $color-warning-darker;
+}
+.bg-warning-light {
+    background-color: $color-warning-light;
+}
+.bg-warning-lighter {
+    background-color: $color-warning-lighter;
+}
+
+/* More Color Options
+------------------------------------
+*/
+
+/* Menu 
+------------------------------------
+*/
+.bg-menu-dark{
+    background-color: $color-menu-dark;
+}
+.bg-menu{
+    background-color: $color-menu;
+}
+.bg-menu-light{
+    background-color: $color-menu-light;
+}
+
+/* Gradients
+------------------------------------
+*/
+.gradient-grey {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 75%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 75%);
+}
+.gradient-black {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 75%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 75%);
+}
+
+/* Other Colors
+------------------------------------
+*/
+.bg-white{
+    background-color: #fff;
+}
+.bg-transparent{
+    background-color: transparent !important;
+}
+
+/* Text Colors */
+.link{
+    opacity: .7;
+    &:hover{
+        opacity: 1;
+    }
+}
+.text-master{
+    color : $color-master !important;
+}
+.text-master-light{
+    color : $color-master-light !important;
+}
+.text-black {
+    color: $color-master-dark !important;
+}
+.text-white {
+    color: #fff !important;
+}
+.text-complete{
+    color: $color-complete !important;
+}
+.text-success {
+    color: $color-success !important;
+}
+.text-info {
+    color: $color-info !important;
+}
+.text-warning {
+    color: $color-warning !important;
+}
+.text-warning-dark{
+    color: $color-warning-dark !important;
+}
+
+.text-danger {
+    color: $color-danger !important;
+}
+.text-primary{
+    color: $color-primary !important;
+}
+
+/* Text Aligngments
+------------------------------------
+*/
+
+.text-right {
+    text-align: right !important;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center !important;
+}
+
+/* Labels
+------------------------------------
+*/
+
+.label {
+    padding: 3px 9px;
+    font-size: rem(11);
+    text-shadow: none;
+    background-color: $color-master-light;
+    font-weight: 600;
+    color: $color-master;
+}
+.label-success {
+    background-color: $color-success;
+    color: #fff;
+}
+.label-warning{
+    background-color: $color-warning;
+    color: #fff;
+}
+.label-important, .label-danger {
+    background-color: $color-danger;
+    color: #fff;
+}
+.label-info{
+    background-color: $color-complete;
+    color: #fff;
+}
+.label-inverse {
+    background-color: $color-complete-dark;
+    color: #fff;
+}
+.label-white {
+    background-color: #fff;
+    color: $color-master;
+}
+
+/* Font Sizes
+------------------------------------
+*/
+.fs-10{
+    font-size: rem(10) !important;
+}
+.fs-11{
+    font-size: rem(11) !important;
+}
+.fs-12{
+    font-size: rem(12) !important;
+}
+.fs-13{
+    font-size: rem(13) !important;
+}
+.fs-14{
+    font-size: rem(14) !important;
+}
+.fs-15{
+    font-size: rem(15) !important;
+}
+.fs-16{
+    font-size: rem(16) !important;
+}
+
+/* Line-heights
+------------------------------------
+*/
+.lh-normal{
+    line-height: normal;
+}
+.lh-10{
+    line-height: rem(10);
+}
+.lh-11{
+    line-height: rem(11);
+}
+.lh-12{
+    line-height: rem(12);
+}
+.lh-13{
+    line-height: rem(13);
+}
+.lh-14{
+    line-height: rem(14);
+}
+.lh-15{
+    line-height: rem(15);
+}
+.lh-16{
+    line-height: rem(16);
+}
+
+
+.overflow-ellipsis{
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+
+

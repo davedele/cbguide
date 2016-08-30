@@ -1,0 +1,45 @@
+
+.user-alert__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: calc(100% - #{$block-full});
+    width: 25rem;
+    padding: $block-half;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    transition: ease 0.3s all;
+    transform: translate(300px, $block-full);
+}
+
+.active {
+    &.user-alert__container {
+        transition: ease 0.3s all;
+        transform: translate(0, $block-full);
+        &:before {}
+    }
+}
+
+.menu-overlay {
+    visibility: hidden;
+    opacity: 0;
+    transition: ease 0.3s all;
+}
+
+.active {
+    &.menu-overlay {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: $block-full;
+        right: 0;
+        width: 100%;
+        // height: 100%;
+        visibility: visible;
+        opacity: 0.8;
+        background-color: whitesmoke;
+        z-index: 2;
+        transition: ease 0.3s all;
+    }
+}

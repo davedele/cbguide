@@ -1,0 +1,156 @@
+@mixin column-count($int: auto) {
+  // auto || integer
+  @include prefixer(column-count, $int, webkit moz spec);
+}
+
+@mixin column-gap($length: normal) {
+  // normal || length
+  @include prefixer(column-gap, $length, webkit moz spec);
+}
+
+
+@for $i from 1 through 25 {
+  .box-#{$i} .content {
+
+    // Debugging styles
+    $size: random(10);
+    padding-bottom: 1.5em * $size;
+  }
+}
+
+/****************************************************\
+  Sass Masonry Mixin
+\****************************************************/
+@mixin masonry($columns: 3, $gap: 2%, $selector: '> *') {
+
+  @if unit($gap) == "rem" {
+    $gap: strip-units($gap) * 16px;
+  }
+  $gapunit: unit($gap);
+
+  // Fallback to inline-blocks and text-align: justify
+  $box-width: 100 / $columns * 1%;
+  $box-width-perc: (100 - (($columns - 1) * $gap)) / $columns;
+  $box-subract: rem( $gap/ ($columns / ($columns - 1)));
+
+  text-align: justify;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+
+  & #{$selector} {
+
+    @include box-sizing(border-box);
+
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+  }
+
+  // Masonry
+  $margins: $gap / 2 * -1;
+  $paddings: ($columns * ($gap/2)) / 2;
+
+  .csscolumns & {
+
+    &:after {
+      content: none;
+    }
+
+    @include column-count($columns);
+
+    @if $gapunit == "%" {
+      @include column-gap(0);
+      margin: {
+        left: $margins;
+        right: $margins;
+      }
+    } @else {
+      @include column-gap($gap);
+    }
+
+    #{$selector} {
+
+      width: 100%;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      column-break-inside: avoid;
+      break-inside: avoid;
+
+      @if $gapunit == '%' {
+        padding: {
+          left: $paddings;
+          right: $paddings;
+        }
+      }
+    }
+    
+  }
+}
+
+/*********************************************\
+  Include Masonry
+\*********************************************/
+.masonry-4 {
+  @include masonry;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    margin-left: -1%;
+    margin-right: -1%;
+}
+
+
+.masonry-3 {
+  @include masonry;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    margin-left: -1%;
+    margin-right: -1%;
+}
+
+.masonry-2 {
+  @include masonry;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 6px;
+    -moz-column-gap: 6px;
+    column-gap: 6px;
+    margin-left: -1%;
+    margin-right: -1%;
+}
+
+.masonry-1 {
+  @include masonry;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-gap: 6px;
+    -moz-column-gap: 6px;
+    column-gap: 6px;
+    margin-left: -1%;
+    margin-right: -1%;
+}
+
+.masonry-transactions {
+  @include masonry;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 6px;
+    -moz-column-gap: 6px;
+    column-gap: 6px;
+    margin-left: -1%;
+    margin-right: -1%;
+}

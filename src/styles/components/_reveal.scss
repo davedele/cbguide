@@ -1,0 +1,192 @@
+$black: #000;
+$white: #FFF;
+$card-total: 3;
+$card-width: 100%;
+$card-height: 100%;
+$card-offset: 16px;
+$items-total:0;
+// .reveal-content {
+//     padding: 4rem;
+//     display: flex;
+//     flex-direction: column;
+//     width: 50%;
+// }
+.create-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    // background: $white;
+    width: $card-width;
+    height: $card-height;
+    // box-shadow: 0 10px 30px rgba($black, 0.2);
+    transform: translateX(-50%);
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.3s ease;
+     background: $body-background;
+    z-index: 2;
+    // @while $card-total > 0 {
+    //     $card-total: $card-total - 1;
+    //     &:nth-child(#{$card-total}) {
+    //         z-index: $card-total * -1;
+    //         top: $card-offset * $card-total;
+    //         width: $card-width - ($card-offset * $card-total);
+    //     }
+    // }
+    &.active {
+        transition: 0.3s ease;
+        visibility: visible;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.reveal-overlay {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+        background: rgba(255, 255, 255, 1);
+        transition: 0.3s ease;
+    }
+}
+
+.create-content {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    &.active {
+        .reveal-content {
+            & > * {
+                opacity: 1;
+                transform: none;
+                @while $items-total > 0 {
+                    &:nth-child(#{$items-total}) {
+                        transition: opacity 0.2s ($items-total * 0.1s - 1) * -1 ease, transform 0.3s ($items-total * 0.1s - 1) * -1 cubic-bezier(0.28, 0.55, 0.385, 1.65), color 0.3s ease;
+                    }
+                    $items-total: $items-total - 1;
+                }
+            }
+        }
+        .overlay {
+            transform: scale(30, 30) translate(-50%, -50%);
+        }
+    }
+    .reveal-content {
+        display: flex; 
+        flex-direction: column;
+        align-items: stretch;
+        color: $fontColorDefault;
+        position: relative;
+        text-align: left;
+        // width: 780px;  //remove for card1 exmp.
+        & > * {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: 0.3s ease;
+            cursor: pointer;
+            // &:hover {
+            //     color: rgba($white, 0.8);
+            // }
+        }
+        .content-header {
+            display: flex;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            padding: $block-fourth $block-half;
+            padding-bottom: $block-eighth;
+            position: relative;
+            overflow: hidden;
+             background: $color-primary;
+               
+            svg {
+                position: absolute;
+                top: -118px;
+                right: 0;
+                width: 340px;
+                transform: rotateZ(-10deg);
+                fill: rgba(255, 255, 255, 0.1);
+            }
+           .header_items {
+            h3 {
+                color: $white;
+                margin-bottom: $block-eighth;
+            }
+            p{
+                color: $white;
+            }
+            i {
+                font-size: 3.6rem;
+                padding-right: $block-third;
+                cursor: normal;
+            }
+            }
+        }
+    }
+    .overlay {
+        position: absolute;
+        right: $fab-offset;
+        bottom: $fab-offset;
+        width: $fab-size;
+        height: $fab-size;
+        border-radius: 100%;
+        fill: #3F88C5;
+        transform: scale(0, 0) translate(-50%, -50%);
+        transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+    }
+}
+
+
+svg.overlay-bg {
+    position: absolute;
+}
+
+.card1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 720px;
+    height: 100%;
+    border-radius: 4px;
+    background: white;
+    transform: translateX(-50%);
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 2;
+    &.active {
+        transition: 0.3s ease;
+        visibility: visible;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.sc-subheader {
+    transition: 0.3 ease;
+    &.active {
+        transition: 0.3 ease;
+        .button-small {
+            opacity: 0;
+            transition: 0.3 ease;
+        }
+    }
+}
+
+
+

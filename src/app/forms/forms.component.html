@@ -1,0 +1,487 @@
+<div class="main-content content-white">
+  <div class="page-container">
+
+    <div class="panel panel-transparent">
+
+      <div class="panel-body">
+
+
+        <div class="row">
+          <!-- toast -->
+
+          <div class="col-sm-10">
+            <h3><span class="semi-bold">Basic Form </span>Elements and Controls</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolorum consequatur consectetur. Vel nostrum
+              porro distinctio velit nemo, commodi a perspiciatis quibusdam corporis sunt, veniam quasi maxime iste doloremque
+              incidunt.
+            </p>
+
+
+            <!--basic-->
+            <div class="row">
+              <div class="col-md-6">
+                <h4>
+                  Inputs
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit blanditiis soluta culpa, incidunt
+                  aut tempore, atque, commodi accusamus sit dolores rem debitis? Natus debitis molestiae impedit, asperiores
+                  non consequuntur cum!
+                </p>
+                <br>
+                <div class="form-group">
+                  <label>Defaut Input</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>Focused</label>
+                  <input type="text" class="focused form-control">
+                </div>
+
+                <br> <br>
+                <div class="form-group">
+                  <label>Text Area</label>
+                  <textarea style="height: 100px" class="form-control ng-pristine ng-valid ng-touched" ngcontrol="message" placeholder="Optional personal message"
+                    rows="2"></textarea>
+                </div>
+
+
+                <br> <br>
+                <div class="form-group">
+                  <label>Helper Text</label>
+                  <span class="help">I'm here to help..</span>
+                  <input type="text" class="autonumeric form-control">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h4>Input Validation
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim tempora cumque quos quam, ullam dolor quae,
+                  expedita fuga repellat quisquam at atque pariatur. Commodi natus dolorem amet aperiam repellendus quos!</p>
+                <br>
+
+                <div class="form-group">
+                  <label>Valid</label>
+                  <input type="text" required class="form-control ng-dirty ng-touched ng-valid">
+                </div>
+
+                <div class="form-group">
+                  <label>Invalid</label>
+                  <input type="text" required class="form-control ng-dirty ng-touched ng-invalid">
+                </div>
+
+                <br> <br>
+                <div class="form-group">
+                  <label>Disabled</label>
+                  <input type="text" disabled class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label>Read Only </label>
+                  <input type="text" class="form-control" readonly placeholder="For your eye's only!">
+                </div>
+
+                <br> <br>
+                <div class="form-group">
+                  <label>Input with Placeholder</label>
+                  <input type="text" placeholder="Im a placehoder" class="form-control">
+                </div>
+              </div>
+
+            </div>
+
+            <br> <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Checkbox
+                </h4>
+                <br>
+                <div class="form-group">
+                  <div class="checkbox check-success">
+                    <input id="checkboxCC" type="checkbox" class="ng-untouched ng-pristine ng-valid">
+                    <label for="checkboxCC">Default </label>
+                  </div>
+
+                  <div class="checkbox check-complete">
+                    <input id="checkboxCC" type="checkbox" checked class="ng-untouched ng-pristine ng-valid">
+                    <label for="checkboxCC">Checked</label>
+                  </div>
+
+                  <div class="checkbox check-danger">
+                    <input id="checkboxCC" type="checkbox" disabled class="">
+                    <label for="checkboxCC">Disabled</label>
+                  </div>
+
+                  <div class="checkbox check-info">
+                    <input id="checkboxCC" type="checkbox" disabled checked class="">
+                    <label for="checkboxCC">Disabled and Checked</label>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="col-md-6">
+                <h4>Radio
+                </h4>
+                <br>
+                <div class="form-group">
+                  <div class="radio radio-success">
+                    <input id="radiocc" type="radio">
+                    <label for="radiocc">Default </label>
+                  </div>
+
+                  <div class="radio radio-complete">
+                    <input id="radiocc1" type="radio" checked>
+                    <label for="radiocc1">Checked</label>
+                  </div>
+
+                  <div class="radio radio-danger">
+                    <input id="radiocc2" type="radio" disabled class="">
+                    <label for="radiocc2">Disabled</label>
+                  </div>
+
+                  <div class="radio radio-info">
+                    <input id="radiocc3" type="radio" disabled checked class="">
+                    <label for="radiocc3">Disabled and Checked</label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Range Slider
+                </h4>
+                <br>
+                <div class="form-group">
+                  <label>Range</label>
+                  <input class="form-control ng-pristine ng-valid ng-touched" max="99" min="0" placeholder="debug" type="range">
+                </div>
+              </div>
+            </div>
+
+            <div class="seper"></div>
+
+            <!--layouts -->
+            <div class="row">
+              <div class="col-sm-10">
+                <h3><span class="semi-bold">Advanced </span>Form Controls</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nostrum autem consectetur eos, nobis magnam
+                  excepturi asperiores, cupiditate porro sint neque aliquid! Nesciunt, distinctio? Error, aperiam consectetur
+                  dolor explicabo voluptate.
+                </p>
+                <br>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <h4>
+                      Combo Inputs
+                    </h4>
+                    <br>
+
+
+                    <div class="form-group">
+                      <label>Search + Select</label>
+                      <select-role id="role">
+                        <div (click)="active = !active">
+                          <div class="form-group">
+                            <div class="cs-select cs-skin-slide" [ngClass]="{cs_active: active}">
+                              <span class="cs-placeholder"> 
+            <input class="form-control placehoder ng-untouched ng-pristine ng-valid" placeholder="Select a role" type="text"></span>
+
+                              <div class="cs_options">
+                                <input class="form-control ng-untouched ng-pristine ng-valid" placeholder="Select a role" type="text">
+
+                                <ul>
+
+                                  <li>
+                                    <role>
+                                      <span class="group-name"><i class="material-icons">lock_open</i> 
+<span> zXcZx</span></span>
+
+                                    </role>
+                                  </li>
+                                  <li>
+                                    <role>
+                                      <span class="group-name"><i class="material-icons">lock_open</i> 
+<span> xvcccx</span></span>
+
+                                    </role>
+                                  </li>
+                                  <li>
+                                    <role>
+                                      <span class="group-name"><i class="material-icons">lock_open</i> 
+<span> user</span></span>
+
+                                    </role>
+                                  </li>
+
+                                  <li>
+                                    <role>
+                                      <span class="group-name"><i class="material-icons">lock_open</i> 
+<span> zXcZx</span></span>
+
+                                    </role>
+                                  </li>
+
+                                  <li>
+                                    <role>
+                                      <span class="group-name"><i class="material-icons">lock_open</i> 
+<span> xvcccx</span></span>
+
+                                    </role>
+                                  </li>
+
+                                  <li>
+                                    <role>
+                                      <span class="group-name"><i class="material-icons">lock_open</i> 
+<span> user</span></span>
+
+                                    </role>
+                                  </li>
+
+
+                                </ul>
+                              </div>
+                              <div class="cs-backdrop"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </select-role>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                      <label>Multi-Select</label>
+                      <multi-select-dropdown>
+                        <div class="pill-container" clickedoutside="">
+                          <div class="sc-generate-wrap start">
+                            <input class="form-control" readonly="" type="text">
+                            <button class="button-small button option-btn-input" (click)="multi = !multi" type="button">Options</button>
+                          </div>
+
+
+                          <div class="pill-menu" [hidden]="!multi">
+                            <ul>
+
+                              <li>
+                                <input type="checkbox" value="opt.value" class="ng-untouched ng-pristine ng-valid"> American
+                                Express
+                              </li>
+                              <li>
+                                <input type="checkbox" value="opt.value" class="ng-untouched ng-pristine ng-valid"> Discover
+                              </li>
+                              <li>
+                                <input type="checkbox" value="opt.value" class="ng-untouched ng-pristine ng-valid"> MasterCard
+                              </li>
+                              <li>
+                                <input type="checkbox" value="opt.value" class="ng-untouched ng-pristine ng-valid"> Visa
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </multi-select-dropdown>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group">
+                      <label>Generate / Copy</label>
+                      <div class="sc-generate-wrap">
+                        <copy-data placeholder="Webhook Key">
+                          <div class="field-container">
+                            <input class="form-control ng-pristine ng-valid ng-touched" name="copyText" readonly="" type="text" placeholder="This stuff gets copied..">
+                            <div class="copy-icons-container">
+                              <!--template bindings={}--><button class="icon-copy" type="button">copy</button>
+                            </div>
+                          </div>
+                        </copy-data>
+                        <button class="button-small button copy-btn-input">Generate</button>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+
+
+
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+
+
+          <div class="seper"></div>
+
+          <!--layouts -->
+          <div class="row">
+            <div class="col-sm-10">
+              <h3><span class="semi-bold">Form </span>Page Layout</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nostrum autem consectetur eos, nobis magnam excepturi
+                asperiores, cupiditate porro sint neque aliquid! Nesciunt, distinctio? Error, aperiam consectetur dolor explicabo
+                voluptate.
+              </p>
+              <br>
+              <p class="small hint-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima deleniti laborum officiis id quod exercitationem
+                dolores rem sequi unde cumque aperiam sunt ratione inventore quaerat beatae error nihil, molestias asperiores?</p>
+              <form id="form-work" class="form-horizontal" role="form" autocomplete="off">
+                <div class="form-group">
+                  <label for="fname" class="col-sm-3 control-label">Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="fname" placeholder="Full name" name="name" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Account Type</label>
+                  <div class="col-sm-9">
+                    <div class="radio radio-success">
+                      <input type="radio" value="credit" name="optioncredit" id="credit">
+                      <label for="male">Credit</label>
+                      <input type="radio" checked="checked" value="check" name="optioncheck" id="check">
+                      <label for="check">Check</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Work</label>
+                  <div class="col-sm-9">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet veniam doloremque harum, obcaecati
+                      neque mollitia quasi corporis culpa, vel. Quibusdam assumenda blanditiis eius quas atque veritatis
+                      corporis, iste nulla officiis!</p>
+                    <p class="hint-text small">Enter some random code below to confirm you are real.</p>
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" required>
+                      </div>
+                      <div class="col-sm-5">
+                        <input type="text" placeholder="Code/Number" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="describe" class="col-sm-3 control-label">Description of yourself. One word..</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="describe" placeholder="Egotistical" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name" class="col-sm-3 control-label">Description of your abilities</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" id="name" placeholder="Briefly Describe your Abilities"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Groups and Roles</label>
+                  <div class="col-sm-9">
+                    <p>Select a Group and a Role...</p>
+                    <p class="hint-text small">The Group dictates which entities the user has access to and the Role decides what the user can do.</p>
+
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <select-group id="group">
+                          <div (click)="active1 = !active1">
+                            <div class="form-group">
+                              <div class="cs-select cs-skin-slide" [ngClass]="{cs_active: active1}">
+                                <span class="cs-placeholder"> 
+                                    <input class="form-control placehoder" placeholder="Select a group" type="text"></span>
+
+                                <div class="cs_options">
+                                  <input class="form-control ng-pristine ng-valid ng-touched" placeholder="Search for a group" type="text">
+
+                                  <ul>
+
+                                    <li>
+                                      <group><span class="group-name"><i class="material-icons">group</i> All</span>
+
+                                      </group>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="cs-backdrop"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </select-group>
+                      </div>
+                      <div class="col-sm-3">
+                        <select-role id="role">
+                          <div (click)="active = !active">
+                            <div class="form-group">
+                              <div class="cs-select cs-skin-slide" [ngClass]="{cs_active: active}">
+                                <span class="cs-placeholder"> 
+            <input class="form-control placehoder ng-untouched ng-pristine ng-valid" placeholder="Select a role" type="text"></span>
+
+                                <div class="cs_options">
+                                  <input class="form-control ng-untouched ng-pristine ng-valid" placeholder="Select a role" type="text">
+
+                                  <ul>
+
+                                    <li>
+                                      <role>
+                                        <span class="group-name"><i class="material-icons">lock_open</i> 
+<span> zXcZx</span></span>
+
+                                      </role>
+                                    </li>
+                                    <li>
+                                      <role>
+                                        <span class="group-name"><i class="material-icons">lock_open</i> 
+<span> xvcccx</span></span>
+
+                                      </role>
+                                    </li>
+                                    <li>
+                                      <role>
+                                        <span class="group-name"><i class="material-icons">lock_open</i> 
+<span> user</span></span>
+
+                                      </role>
+                                    </li>
+
+
+                                  </ul>
+                                </div>
+                                <div class="cs-backdrop"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </select-role>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <br>
+               
+                  
+                  <div class="btn-group end">
+                    <button class="button-sc btn-success" type="submit">Submit</button>
+                    <button class="button-sc button-outline"><i class="pg-close"></i> Cancel</button>
+                  </div>
+            
+              </form>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

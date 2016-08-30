@@ -1,0 +1,252 @@
+//These are the styles for the top header/ sub-header.
+// nav-header
+.sc-header {
+    @include header-block($white, $border-bottom: $base-border);
+    @include mobile {
+        @include header-block($white, $width: auto, $justify: space-between, $border-bottom: $base-border);
+    }
+    .user-options {
+        @include header-block-element-right;
+        flex-direction: row;
+        justify-content: space-around;
+       
+        @include mobile {
+            @include header-block-element-right($mLeft: 0);
+        }
+        &__alert,
+        &__profile {
+            @include vertical-align();
+            padding: 0 $block-half 0 $block-half;
+            min-height: $block-full;
+        }
+        &__alert {
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+.user-options-avatar {
+    .round-avatar {
+    border-radius: 100%;
+    overflow: hidden;
+    max-width: 40px;
+    }
+}
+
+
+.user-options {
+    .username {
+         margin-right: $block-fourth;
+         span:last-child {
+             font-weight: 600;
+         }
+    }
+}
+.ha-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: $block-full;
+    padding: 0 $block-half;
+}
+
+.sc-subheader {
+    @include header-block($white, $border-bottom: $base-border);
+    transition: 0.3s all cubic-bezier(0.28, 0.55, 0.385, 1.65);
+    @include mobile {
+        @include header-block($white, $width: auto, $justify: space-between, $border-bottom: $base-border);
+    }
+  
+    .header-action {
+        @include header-block-element(none, none);
+        h3 {
+            &.home-crumb {
+            margin: 0;
+            font-weight: 300;
+            font-size: 2.2rem;
+            text-indent: 0.5rem;
+            }
+                
+            &.current-crumb {
+            display: none;
+            margin-bottom: 0;
+            font-weight: 300;
+            font-size: 2.2rem;
+                &.active {
+                    display: flex;
+                    color: $color-primary;
+                    font-weight: 400;
+                }
+            }
+        }
+        svg {
+            margin-right: $block-third;
+            circle {
+                &.add {
+                    fill: $color-primary;
+                }
+            }
+        }
+    }
+    .admin-options {
+        @include header-block-element-right();
+        @include mobile {
+            @include header-block-element-right($mLeft: 0);
+        }
+        margin-right: 30px;
+        & > .button, & > button, {
+                margin-bottom: 0;
+                margin-left: $block-third;
+                display: flex;
+                align-items: center;
+            &:nth-child(2) {
+                margin-right: $block-half;
+            }
+            i{
+                color: white;
+                padding: 1rem;
+                &:hover {
+                    transition: none;
+                }
+            }
+            @include mobile {
+                display: none;
+            }
+        }
+        & > * {
+            margin-bottom: 0;
+        }
+        .m-dropdown {
+            display: none;
+            @include mobile {
+                @include vertical-align();
+                padding: 0 $block-half 0 $block-half;
+                border-left: rem(1) solid #F2F2F2;
+                min-height: $block-full;
+                & > button {
+                    margin-bottom: 0;
+                    margin-left: $block-third;
+                }
+            }
+        }
+    }
+}
+
+.sc-header,
+.sc-subheader {
+    @include mobile {
+    }
+}
+
+
+//--header /--sub-header
+.sc-header,
+.sc-subheader {
+    @include mobile {
+    }
+}
+// burger
+//----------
+
+@keyframes checked-anim {
+    50% {
+        width: 3000px;
+        height: 3000px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+@keyframes not-checked-anim {
+    0% {
+        width: 3000px;
+        height: 3000px;
+    }
+}
+
+#trigger,
+#burger,
+#burger:before,
+#burger:after {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: #03A9F4;
+    width: 30px;
+    height: 5px;
+    transition: .2s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#trigger {
+    height: 25px;
+    background: none;
+}
+
+#burger:before {
+    content: " ";
+    top: 10px;
+    left: 0;
+}
+
+#burger:after {
+    content: " ";
+    top: 20px;
+    left: 0;
+}
+
+
+#menu {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    background-color: $color-primary;
+    border-bottom-right-radius: 100%;
+    animation: not-checked-anim .2s both;
+    transition: .2s;
+    & > li {
+        & > .reveal-content {
+            display: none;
+        }
+    }
+    &.show {
+        animation: checked-anim 1s ease both;
+        #burger {
+            top: 35px;
+            transform: rotate(180deg);
+            transition: transform .2s ease;
+            &:before {
+                width: 20px;
+                top: -2px;
+                left: 18px;
+                transform: rotate(45deg) translateX(-5px);
+                transition: transform .2s ease;
+            }
+            &:after {
+                width: 20px;
+                top: 2px;
+                left: 18px;
+                transform: rotate(-45deg) translateX(-5px);
+                transition: transform .2s ease;
+            }
+        }
+        & > li {
+            & > .reveal-content {
+                padding: 4rem;
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                color: initial;
+            }
+        }
+    }
+}

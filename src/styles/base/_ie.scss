@@ -1,0 +1,196 @@
+select::-ms-expand{
+display:none;
+}
+
+input::-ms-clear {
+display: none;
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+    body {
+        overflow: hidden;
+    }
+    
+    .main-content {
+        overflow-y: auto !important;
+    } 
+
+    .sc {
+        background: #fafafa !important;
+    }
+    
+    .sc-content {
+        height: 100vh;
+        overflow-y: auto;
+    } 
+    
+    //left nav
+    left-nav {
+        .sc-leftnav {
+            min-width: 260px;
+            @include mobile {
+                min-width: 62.8px;
+            }
+            @include tablet {
+                min-width: 62.8px;
+            }
+        }
+    }
+
+    //headers
+    //min-height not working with "align-items: center"
+    .ha-select {
+        height: 6.32rem !important;
+    }
+
+    .user-options__profile {
+        height: 6.32rem !important;
+    }
+
+    .sc-subheader .header-action {
+        height: 6.32rem !important;
+    }
+
+    // customers detail header
+    .customers-container {
+        height: 230px;
+    }
+    
+    //grids
+    .row {
+        flex-wrap: nowrap !important;
+    }
+
+
+
+    // bs4 ie grid fix // 
+    // todo
+    .row, .customer-info-details {
+        @for $i from 1 through 12 {
+            .col-md-#{$i} { 
+                flex-grow: 1 !important;
+                flex-shrink: 1 !important;    
+            }
+        }
+    }
+   
+   .row {
+       @for $i from 1 through 12 {
+          .cfo-steps.col-md-#{$i} { 
+                flex-grow: 0 !important;
+                flex-shrink: 0 !important;    
+            }
+        }
+   }
+  
+    //table cfo specification 
+    .spec-cfo {
+        table {
+            th {
+                flex: 1 1 auto !important;
+                justify-content: inherit !important; 
+            } 
+            td {
+                flex: 1 1 auto !important;
+                justify-content: inherit !important; 
+            } 
+        }
+    }
+
+    //grid table headers 
+    .table-ops .table-sort {
+        height: 6.32rem !important;
+    }
+
+    // forms
+    select::-ms-expand{
+    display:none;
+    }
+
+    input::-ms-clear {
+    display: none;
+    }
+
+    // logo
+    .spinner:before {
+        width: 90px !important;
+        height: 90px !important;
+        padding: 0 !important;
+    }
+
+    .debug-amt {
+        display: none;
+    }
+
+    .icon-copy {
+        left: 0rem !important;
+    }
+
+    //datepicker
+    .sc-dp {
+        #calendar {
+            #days {
+                & > .day {
+                    animation: none !important;
+                    opacity: 1 !important;
+                }   
+            }
+        }
+    }
+
+
+    .sc-generate-wrap {
+        position: relative;
+        &.start {
+            button {
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+
+    
+    
+}
+
+
+
+
+// Edge broswer
+//-------------
+
+@supports (-ms-accelerator:true) {
+//datepicker
+    .sc-dp {
+        #calendar {
+            #days {
+                & > .day {
+                    animation: none !important;
+                    opacity: 1 !important;
+                }   
+            }
+        }
+    }
+}
+
+
+
+// * Safari 9.0+ */
+//=---------------
+@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+
+    .table {
+        overflow: visible !important;
+    }
+
+    .cs-skin-slide .cs_options li {
+    min-height: 30px;
+    }
+
+    .select-content {
+        li.safari_only {
+            min-height: 63px;
+        }
+    }
+}

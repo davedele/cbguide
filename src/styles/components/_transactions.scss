@@ -1,0 +1,25 @@
+
+//modals
+//-------
+
+// void
+
+.transaction-modal {
+    &--content {
+    border-top: $base-border;
+    // background-color: $gray-lighter;
+    margin-top: 1.58214rem;
+    padding: 1rem 0;
+        .total {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .card-type .last-four {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        } 
+        
+    }
+}

@@ -1,0 +1,228 @@
+.customers-container {
+    // @include flex-justify($dir: column);  
+        
+        .customer-info {
+            width: 100%;
+            position: relative;
+            height: 21.04857rem;
+            // padding: $block-full $block-half $block-half;
+            display: flex;
+            flex-direction: column;
+            background-image: url(/images/customer-profile-bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+            
+        .customer-content {
+            color: $white;
+            
+            
+            .customer-addr {
+                
+            }
+            
+            .customer-pm {
+                
+            }
+            
+            .customer-sch {
+                
+            }
+        }
+    }
+
+.cust-title-header {
+    flex: 1 1 auto !important;
+    align-items: center;
+}
+.customer-avatar {
+   position: relative;
+   padding-left: $block-half;
+
+       .dummy-avatar{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;;
+            flex-direction: column;
+            background-color: $color-primary;
+            width: 130px;
+            height: 130px;
+            top: $block-half;
+            border-radius: $border-rad;
+            z-index: 1;
+            //box-shadow from panels 
+            -webkit-box-shadow: 1px 0px 1px 0 rgba(0,0,0,.07),1px 0px 5px 0 rgba(0,0,0,.06);
+            box-shadow: 1px 0px 1px 0 rgba(0,0,0,.07),1px 0px 5px 0 rgba(0,0,0,.06);
+       }
+
+       .status-ind {
+            background-color: transparent;
+            position: relative;
+            top: 1.4rem;
+            font-weight: 500;
+            display: flex;
+            flex-direction: row;
+            width: 60px;
+            height: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            /* right: -0.2em; */
+            /* top: -0.4rem; */
+            border-radius: 0.3rem;
+            letter-spacing: 0.1rem;
+            &.status--0 {
+                background-color: $color-info-light;
+            }
+
+       }
+       .small-ind {
+            font-size: 0;
+            border-radius: 50%;
+            position: absolute;
+            height: 0.7rem;
+            width: 0.7rem;
+            right: -26px;
+            top: -6px;
+       }
+
+       .cust-letter {
+            color: transparent;
+            display: block;
+            text-align: -moz-center;
+            &:first-letter {
+                color: white;
+                font-size: 8.6rem;
+                text-transform: uppercase;
+                letter-spacing: -2.9rem;
+            }
+        }
+   
+}
+
+.customer-detail {
+    margin-left: $block-half;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    h2 {
+        color: white;
+        padding-top: 4.6px;
+        text-transform: capitalize;
+    }
+    ul {
+        color: white;
+        margin: 4.8px 0.7rem -0.8rem 0;
+        line-height: 0.8;
+    }
+}
+
+.customer-more-detail {
+    background-color: $white; 
+    display: flex;
+    align-items: center;
+    -webkit-box-shadow: 1px 0px 1px 0 rgba(0,0,0,.07),1px 0px 5px 0 rgba(0,0,0,.06);
+    box-shadow: 1px 0px 1px 0 rgba(0,0,0,.07),1px 0px 5px 0 rgba(0,0,0,.06);
+    padding-left: 20rem;
+    min-height: 63px;
+}
+
+
+.customer-info-details {
+    margin-top: $block-half;
+}
+
+.cust-item {
+    li {
+        border-left: 2px solid white;
+        padding-left: $block-fourth;
+        margin-bottom: $block-third;
+        border-left: 1px dotted $color-info;
+
+
+        &:before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 2px solid $color-info;
+            background: $white;
+            display: flex;
+            position: absolute;
+            margin-top: 0rem;
+            left: 17px;
+        }
+
+        ul {
+            border-left: none;
+
+            li {
+                border-left: none !important;
+                &:after {
+                  
+                }
+                &:before {
+                    width: 18px;
+                    height: 1px;
+                    border-radius: 0;
+                    border: none;
+                    background: #3b4752;
+                    display: block;
+                    position: absolute;
+                    margin-top: 1rem;
+                    margin-left: 4px;
+                    right: 0;              
+                }
+
+                .status {
+              
+                }
+            } 
+        }
+    }
+
+    payment-method, address, schedule {
+        position: relative;
+        width: 100%;
+        span {
+            &:first-child {
+                font-weight: bold;
+                margin-right: 1rem; 
+                line-height: 2;   
+            }
+            &:last-child {
+                 
+            }
+        }
+
+        .sched-edit {
+            position: relative;
+            
+            a {
+                position: absolute;
+                background: $color-primary;
+                color: white;
+                right: 0; 
+                z-index: 1;
+            }
+        }
+
+        .cc {
+            
+        }
+    }
+}
+
+// TODO: move to utility
+// FLEX bs row 
+.flex-one {
+    flex: 1 1 auto;
+}
+
+//todo
+.no-mg-lft {
+padding-left: 0;
+}
+.c-center {
+    align-items: center;
+}

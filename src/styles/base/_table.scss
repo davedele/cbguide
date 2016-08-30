@@ -1,0 +1,795 @@
+// Table
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+data-grid{
+  width: 100%;
+}
+
+table {
+  border-spacing: 0;
+}
+
+// th,
+// td {
+//   border-bottom: 0.1rem solid #e1e1e1;
+//   padding: 1.2rem 1.5rem;
+//   text-align: left;
+//   &:first-child {
+//     padding-left: 0;
+//   }
+//   &:last-child {
+//     padding-right: 0;
+//   }
+// }
+
+
+
+// Material Design shadows
+// 
+@mixin shadow-z-1 {
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.12),
+                      0 1px 2px 0 rgba(0,0,0,.24);
+  -moz-box-shadow:    0 1px 3px 0 rgba(0,0,0,.12),
+                      0 1px 2px 0 rgba(0,0,0,.24);
+  box-shadow:         0 1px 3px 0 rgba(0,0,0,.12),
+                      0 1px 2px 0 rgba(0,0,0,.24);
+}
+
+
+/* -- Material Design Table style -------------- */
+
+// Variables
+// ---------------------
+$table-header-font-weight:      500;
+$table-header-font-color:       inherit;
+
+$table-cell-padding:            #{$block-eighth/2} $block-eighth;
+$table-condensed-cell-padding:  #{$table-cell-padding / 2};
+
+
+$table-bg:                      #fff;
+$table-bg-accent:               #f5f5f5;
+$table-bg-hover:                rgba(0,0,0,.12);
+$table-bg-active:               $table-bg-hover;
+$table-border-color:            #e0e0e0;
+
+
+
+// Tables
+//
+// -----------------
+
+// Baseline styles
+.table {
+  width: 100%;
+  max-width: 100%;
+  background-color: $table-bg;
+  border-spacing: 0;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      // @include transition(all .2s ease);
+      > th,
+      > td {
+        text-align: left;
+        padding: $table-cell-padding;
+        vertical-align: middle;
+        border-top: 0;
+        @include transition(all .2s ease);
+      }
+    }
+  }
+  > thead > tr > th {
+    font-weight: $table-header-font-weight;
+    color: $table-header-font-color;
+    vertical-align: bottom;
+    white-space: pre-wrap;
+    // border-bottom: 1px solid rgba(0,0,0,.12);
+  }
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  > tbody + tbody {
+    border-top: 1px solid rgba(0,0,0,.12);
+  }
+
+  // Nesting
+  .table {
+    background-color: $table-bg;
+  }
+
+  // Remove border
+  .no-border {
+    border: 0;
+  }
+}
+
+// Condensed table w/ half padding
+.table-condensed {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-condensed-cell-padding;
+      }
+    }
+  }
+}
+
+.flex-height {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+// Bordered version
+//
+// Add horizontal borders between columns.
+.table-bordered {
+  border: 0;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 0;
+      }
+    }
+  }
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 2px;
+    }
+  }
+}
+
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table-striped {
+  > tbody > tr:nth-child(odd) {
+    > td,
+    > th {
+      background-color: $table-bg-accent;
+    }
+  }
+}
+
+// Hover effect
+//
+.table-hover {
+  > tbody > tr:hover {
+    > td,
+    > th {
+      background-color: $table-bg-hover;
+    }
+  }
+}
+
+// Responsive tables (vertical)
+//
+// Wrap your tables in `.table-responsive-vertical` and we'll make them mobile friendly
+// by vertical table-cell display. Only applies <768px. Everything above that will display normally.
+// For correct display you must add 'data-title' to each 'td'
+.table-responsive-vertical {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+
+ @media screen and (max-width: 768px) {
+
+    // Tighten up spacing
+     .table {
+      margin-bottom: 0;
+      background-color: transparent;
+      > thead,
+      > tfoot {
+        display: none;
+      }
+
+      > tbody {
+        display: block;
+
+        > tr {
+          display: block;
+          border: 1px solid $table-border-color;
+          border-radius: 2px;
+          margin-bottom: $table-cell-padding;
+
+          > td {
+            background-color: $table-bg;
+            display: block !important;
+            vertical-align: middle;
+            text-align: right;
+          }
+          > td[data-title]:before {
+            content: attr(data-title);
+            float: left;
+            font-size: inherit;
+            font-weight: $table-header-font-weight;
+            color: $table-header-font-color;
+          }
+        }
+      }
+    }
+    
+    // Special overrides for shadows
+    &.shadow-z-1 {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      > .table > tbody > tr {
+        border: none;
+        @include shadow-z-1();
+      }
+    }
+
+    // Special overrides for the bordered tables
+     .table-bordered {
+      border: 0;
+
+      // Nuke the appropriate borders so that the parent can handle them
+      > tbody {
+        > tr {
+          > td {
+            border: 0;
+            border-bottom: 1px solid $table-border-color;
+          }
+          > td:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+
+    // Special overrides for the striped tables
+    > .table-striped {
+      > tbody > tr > td,
+      > tbody > tr:nth-child(odd) {
+          background-color: $table-bg;
+      }
+      > tbody > tr > td:nth-child(odd) {
+          background-color: $table-bg-accent;
+      }
+    }
+
+    // Special overrides for hover tables
+    > .table-hover {
+      > tbody {
+        > tr:hover > td,
+        > tr:hover {
+          background-color: $table-bg;
+        }
+        > tr > td:hover {
+          background-color: $table-bg-hover;
+        }
+      }
+    }
+  }
+}
+
+
+// CSS/SASS Color variations
+//
+// --------------------------------
+
+// table hover - light blue
+// ------------
+.table-striped.table-mc-light-blue > tbody > tr:nth-child(odd) > td,
+.table-striped.table-mc-light-blue > tbody > tr:nth-child(odd) > th {
+    background-color: #e1f5fe;
+}
+.table-hover.table-mc-light-blue > tbody > tr:hover > td,
+.table-hover.table-mc-light-blue > tbody > tr:hover > th {
+    background-color: fade-out($color-primary, 0.8);
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive-vertical .table-striped.table-mc-light-blue > tbody > tr > td,
+    .table-responsive-vertical .table-striped.table-mc-light-blue > tbody > tr:nth-child(odd) {
+        background-color: $table-bg;
+    }
+    .table-responsive-vertical .table-striped.table-mc-light-blue > tbody > tr > td:nth-child(odd) {
+        background-color: #e1f5fe;
+    }
+    .table-responsive-vertical .table-hover.table-mc-light-blue > tbody > tr:hover > td,
+    .table-responsive-vertical .table-hover.table-mc-light-blue > tbody > tr:hover {
+        background-color: $table-bg;
+    }
+    .table-responsive-vertical .table-hover.table-mc-light-blue > tbody > tr > td:hover {
+        // background-color: complement($color-primary);
+        background-color: fade-out($color-primary, 0.8);
+    }
+}
+
+.table-footer {
+  display: block;
+}
+
+
+// data-tables
+// items in table containers for changing views
+.table-tools {
+    @include header-block($bgColor: none);
+    .tools {
+        @include header-block-element-right();
+        padding-top: $block-sixth;
+        padding-bottom: $block-sixth;
+        button {
+           
+            i {
+                margin-right: 0;
+                margin-left: $block-sixth;
+                color: $icon;
+                
+                &:hover {
+                     color: $color-primary;
+                }
+            }
+        }
+    }
+}
+
+data-grid {
+    flex-direction: column;
+}
+
+.data-table-tools {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: inherit;
+    align-items: center;
+    border-radius: 0.28625rem 0.28625rem 0 0;
+    height: 6.32857rem;
+    position: relative;
+    color: #5F6876 !important;
+
+    .table-options{
+          @include table-options();
+          label[for="templates"] {
+            margin-bottom: 0;
+          }
+          .table-views {
+            display: flex;
+            flex-direction: row;
+          }
+          select {
+              border: 0;
+              width: auto;
+          }
+          span {
+              margin-right: $block-sixth;
+
+          }
+      }
+}
+
+ .table-ops {
+        @include header-block($white, $border-bottom: $base-border);
+        color: $text-primary !important;
+        &:first-child {
+            border-radius: $border-rad $border-rad 0 0; 
+           
+        }
+        &.border-rad {
+          border-radius: $border-rad $border-rad 0 0; 
+        }
+        & > * {
+            @include row-align($mRight: 0);
+        }
+        .pipe {
+            display: block;
+            width: 1px;
+            height: 25px;
+            background-color: #E1E1E1;
+            @include vertical-align();
+            // min-height: $block-full;
+        }
+        .refresh {
+            padding: 0 $block-half;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: $block-full;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    margin-left: $block-sixth;
+                }
+            }
+        }
+        .search {
+            display: flex;
+            flex-grow: 0.1;
+            
+            i {margin-right: $block-fourth}
+            input.table-search {
+                border: 0;
+                padding-left: 0;
+                padding-top: 0;
+                width: 100%;
+                transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+                &:focus, &:active {
+                }
+                // min-width: 300px;
+            }
+        }
+      
+        
+         .table-sort{
+           @include sort-control();
+            label[for="sort"] {
+              margin-right: $block-fourth;
+              margin-bottom: 0;
+              line-height: inherit;
+            }
+            select {
+                width: auto;  
+                margin-left: $block-fourth;
+
+                &:first-child {
+                  display: none;
+                }
+            }
+        }
+        
+        .table-filter{
+           @include dd-control($justify: flex-start);
+           i {
+            margin-right: $block-fourth;
+            margin-bottom: 0;
+            }
+            select {
+                border: 0;
+                width: auto;
+                margin-left: 0;
+            }
+            span {
+               text-indent: $block-eighth;
+               margin-bottom: $block-eighth;
+               
+            }
+            
+        }
+        .pagination {
+            padding: 0 $block-half;
+            display: flex;
+            justify-content: center;
+            flex: auto;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: $block-full;
+            border-top: $block-border;
+            .arrow-l,
+            .arrow-r {
+                margin-left: $block-fourth;
+            }
+        }
+        //todo
+        .pagi-item-count {
+              position: absolute;
+              left: 1.46429rem;
+              top: 2.1rem;
+              font-size: 1.4rem;
+              font-weight: 500;
+        }
+    }
+    
+    .table-ops-two {
+        @include header-block($white, $border-bottom: $base-border);
+        .filter {
+            @include table-headerBl;
+            & > * {
+                @include row-align();
+            }
+        }
+        .sort {
+            @include table-headerBl-right;
+            & > * {
+                @include row-align($mRight: 0, $mLeft: $block-third);
+            }
+        }
+    }
+        
+
+.sc-data-table {
+    @include data-table-container($bgColor: transparent);
+    position: relative;
+    .data-table {
+        background: $white;
+    }
+}
+
+
+  tbody.list-view {
+      overflow-x: hidden;
+      margin: 0 -0.1rem 1.1em 0.3rem;
+      flex: 1 1 auto;
+      /* margin-bottom: 0; */
+      display: block;
+      overflow-y: auto;
+      justify-content: center;
+      align-items: baseline;
+      /* align-content: flex-start; */
+      height: 1vh;
+      
+      &::-webkit-scrollbar {
+              width: 7px;
+              margin-left: 10px;
+              padding: 10px;
+              cursor: pointer;
+          }
+          &::-webkit-scrollbar-track {
+              background: $gray-lightest;
+              border-radius: 10px;
+              width: 10px;
+              cursor: pointer;
+          }
+          &::-webkit-scrollbar-thumb {
+              border-radius: 10px;
+              width: 7px;
+              cursor: pointer;
+              background: $gray-lighter;
+          }
+          
+  }
+
+  thead {
+   
+    display: flex; 
+    height: $block-half;
+    position: relative;
+    border-bottom: 1px solid rgba(233, 233, 233, 0.60);
+   
+  }
+    
+  tr, .t-row {
+   position: relative;
+  flex-wrap: no-wrap;
+  -webkit-flex-wrap: no-wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  width: 100%;
+  }
+  
+  td {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-flex-basis: 0;
+  -moz-flex-basis: 0;
+  flex-basis: 0;
+  min-width: 0;
+  -ms-flex-preferred-size: 0;
+  align-items: center;
+  
+  span.truncate {
+    @include truncate(140px);
+  }
+}
+
+
+th {
+    // @include truncate(600px);
+    white-space: normal !important;
+}
+
+
+
+    
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-spacing: 0;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding: 0 1.1rem 0;
+  
+  &.normal {
+     margin-bottom: auto;
+  }
+}
+
+th {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-flex-basis: 0;
+  -moz-flex-basis: 0;
+  flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  padding: 0.5em;
+  align-items: center;
+}
+
+
+
+
+
+th, td {
+  &.table-action-head {
+    max-width: 40px !important;
+  }
+}
+
+.sc-flex-grow0 {
+  -webkit-flex-grow: -1;
+  -moz-flex-grow: -1;
+  flex-grow: -1;
+  -ms-flex-positive: -1;
+}
+
+.sc-flex-grow1 {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+}
+
+.sc-flex-grow2 {
+  -webkit-flex-grow: 2;
+  -moz-flex-grow: 2;
+  flex-grow: 2;
+  -ms-flex-positive: 2;
+}
+
+.sc-flex-grow3 {
+  -webkit-flex-grow: 3;
+  -moz-flex-grow: 3;
+  flex-grow: 3;
+  -ms-flex-positive: 3;
+}
+
+.sc-flex-grow4 {
+  -webkit-flex-grow: 4;
+  -moz-flex-grow: 4;
+  flex-grow: 4;
+  -ms-flex-positive: 4;
+}
+
+.sc-flex-grow5 {
+  -webkit-flex-grow: 5;
+  -moz-flex-grow: 5;
+  flex-grow: 5;
+  -ms-flex-positive: 5;
+}
+
+.sc-flex-grow6 {
+  -webkit-flex-grow: 6;
+  -moz-flex-grow: 6;
+  flex-grow: 6;
+  -ms-flex-positive: 6;
+}
+
+.sc-flex-grow7 {
+  -webkit-flex-grow: 7;
+  -moz-flex-grow: 7;
+  flex-grow: 7;
+  -ms-flex-positive: 7;
+}
+
+.sc-flex-grow8 {
+  -webkit-flex-grow: 8;
+  -moz-flex-grow: 8;
+  flex-grow: 8;
+  -ms-flex-positive: 8;
+}
+
+.sc-flex-grow9 {
+  -webkit-flex-grow: 9;
+  -moz-flex-grow: 9;
+  flex-grow: 9;
+  -ms-flex-positive: 9;
+}
+
+.sc-flex-grow10 {
+  -webkit-flex-grow: 10;
+  -moz-flex-grow: 10;
+  flex-grow: 10;
+  -ms-flex-positive: 10;
+}
+
+        
+ // table-tools
+ 
+ .table-tools .tools {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-top: 1.22143rem;
+    padding-bottom: 1.22143rem;
+    background: rgb(255, 255, 255);
+    height: 3.5rem;
+    border-radius: 0.1rem;
+    box-shadow: 0 5px 11px 0 rgba(255, 255, 255, 0.18), 0 4px 15px 0 rgba(169, 169, 169, 0.15);
+    margin-bottom: 2.5rem;
+    
+    .pipe.small {
+    background-color: #DEDDDD !important;
+    height: 37px;
+    }
+    
+   .btn-ops:last-child{
+       padding-right: $block-sixth;
+   }
+ }
+
+ 
+
+footer.table-ops {background: $footer !important;}
+
+
+
+// fixed tables ?
+.sc-data-table {
+
+    .fixed-container {
+        max-height: 500px;
+        overflow-y: scroll;
+        @include scrollbar;
+        
+        & + footer.table-ops {
+            position: relative;
+         }
+     }   
+ }
+ 

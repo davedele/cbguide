@@ -1,3 +1,206 @@
-<h1>
-  {{title}}
-</h1>
+<div class="sc">
+    <!--Left navigation-->
+    <aside class="sc-leftnav" [ngClass]='{mini: navMini}'>
+
+        <div class="brand">
+            <!--<img src="../images/sc1.png">-->
+            <span>{{title}}</span>
+        </div>
+
+
+        <nav class="menu">
+            <ul>
+
+                <!--// tooltips-->
+                <!--data-tootik="Dashboard" data-tootik-conf="right invert shadow square no-arrow"-->
+                
+                <li class="item">
+                    <a [routerLink]="['home']">
+                        <i class="lnr lnr-cog"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="item">
+                    <a [routerLink]="['forms']" >
+                        <i class="lnr lnr-cog"></i>
+                        <span>Forms</span>
+                    </a>
+                </li>
+
+                <li class="item">
+                    <a [routerLink]="['color']">
+                        <i class="lnr lnr-cog"></i>
+                        <span>Color</span>
+                    </a>
+                </li>
+
+                 <li class="item">
+                    <a [routerLink]="['buttons']">
+                        <i class="lnr lnr-cog"></i>
+                        <span>Buttons</span>
+                    </a>
+                </li>
+                
+                <li class="item">
+                    <a [routerLink]="['typo']">
+                        <i class="lnr lnr-cog"></i>
+                        <span>Typo</span>
+                    </a>
+                </li>
+
+                <li class="item">
+                    <a [routerLink]="['panels']">
+                        <i class="lnr lnr-cog"></i>
+                        <span>Panels</span>
+                    </a>
+                </li>
+
+                <li class="item">
+                    <a [routerLink]="['tables']" [routerLinkActive]="['is-active']">
+                        <i class="lnr lnr-cog"></i>
+                        <span>Tables</span>
+                    </a>
+                </li>
+
+                <li class="item">
+                    <a [routerLink]="['notification']">
+                        <i class="lnr lnr-cog"></i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+
+                
+                <li class="item sub">
+                    <a (click)="toggleSubMenu = !toggleSubMenu" [class.active]="toggleSubMenu">
+                        <i class="lnr lnr-cog"></i>
+                        <span>Grid</span>
+                        <i class="material-icons">keyboard_arrow_down</i>
+                    </a>
+
+
+                    <ul class="sub-menu" [class.expanded]="toggleSubMenu">
+                        <li>
+                            <a [routerLink]="['grid']">
+
+                                <span>12 Column</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['masonry']">
+
+                                <span>Masonry</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                 <li class="item sub">
+                    <a (click)="toggleSubMenu1 = !toggleSubMenu1" [class.active]="toggleSubMenu1">
+                        <span>Layouts</span>
+                        <i class="material-icons">keyboard_arrow_down</i>
+                    </a>
+
+
+                    <ul class="sub-menu" [class.expanded]="toggleSubMenu1">
+                        <li>
+                            <a [routerLink]="['orgs']">
+                                <span>Organizations Detail</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span>Customer Detail</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+                <!--<li class="item">
+                    <a [routerLink]="['Users']">
+                       
+                        <span>Users</span>
+                        <span class="badge"><span>3</span></span>
+                    </a>
+                </li>-->
+
+            </ul>
+        </nav>
+
+
+        <div class="burger">
+            <a class="expand-collapse-sidebar" [class.expand]="navMini" (click)="navMini = !navMini">
+                <i class="material-icons">arrow_back</i>
+                <i class="material-icons">arrow_forward</i>
+            </a>
+        </div>
+        <!--<footer><a href="#"><span class="lnr lnr-lock"></span>Copyright Forte 2014-2016</a></footer>-->
+    </aside>
+    <!--Main content area-->
+    <div class="sc-content">
+        <!--Main-header-->
+        <header class="sc-header">
+            <!---->
+            <div class="ha-select">
+                <div class="home-account-container">
+                    <div class="home-account-name sc-dropdown_container" dropMenu>
+                        <div class="home-account__name"><span>R</span> <span>Test Dev ISO</span> <span>1200</span></div>
+
+                        <ul class="sc-dropdown sc-dropdown__ha">
+                            <li class="search-account">
+                                <i class="material-icons">search</i>
+                                <input class="search-input" type="text" placeholder="Search Accounts.." />
+                                <span><i class="material-icons">close</i></span>
+                            </li>
+                            <li><a>test account - 2000</a></li>
+                            <li><a>test account - 2000</a></li>
+                            <li><a>test account - 2000</a></li>
+                            <li><a>test account - 2000</a></li>
+                            <li><a>test account - 2000</a></li>
+                            <li><a>test account - 2000</a></li>
+                            <li><a>test account - 2000</a></li>
+                            <li><a>test account - 2000</a></li>
+                            <li><a>test account - 2000</a></li>
+                            <li><a>test account - 2000</a></li>
+                            <li><a>test account - 2000</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="user-options">
+                <div class="user-options__alert">
+                    <span (click)="showNotifications = true" [style.display]="!showNotifications ? 'block' : 'none'"><i class="material-icons">notifications_none</i></span>
+                    <span class="close" (click)="showNotifications = false" [style.display]="showNotifications ? 'block' : 'none'"><i class="material-icons">close</i></span>
+                </div>
+                <div class="user-options__profile">
+                    <div class="user-options-avatar sc-dropdown_container" dropMenu>
+                        <span class="ava"><i class="material-icons">account_circle</i></span>
+                        <ul class="sc-dropdown sc-dropdown__up">
+                            <li class="user-content">
+                                <div class="ava-edit">
+                                    <i class="material-icons">account_circle</i>
+                                </div>
+                                <div class="display-name">
+                                    <span> coolguy@myspace.com </span>
+                                </div>
+                            </li>
+                            <li>Switch to Sandbox </li>
+                            <li>Change Password</li>
+                            <li>Logout</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="main-content">
+
+            <router-outlet></router-outlet>
+
+        </div>
+
+    </div>
+</div>

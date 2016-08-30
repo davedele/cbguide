@@ -1,0 +1,36 @@
+// Utility
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Clear a float with .clearfix
+.clearfix {
+  *zoom: 1;
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+ // remove margins
+.rm-margin {
+  margin-left: 0 !important;
+}
+
+.no-ml-mr {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+ .no-border {
+   border: none !important;
+ }
+
+ .no-mb {
+     margin-bottom: 0 !important;
+ }
+ .no-padding {
+     padding: 0 !important;
+ }

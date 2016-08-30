@@ -1,0 +1,80 @@
+//
+// Responsive web design (RWD) related styles.
+//
+//
+
+// responsive images FTW
+// ensure that images can't exceed the width of their containers
+// http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// prevent these from overflowing their containers
+img, embed, object, video {
+  max-width: 100%;
+}
+
+
+
+$bp-small : rem(544);
+// $bp-small-2 : 29.75em;
+// $bp-small-3 : 39.8em;
+
+// $bp-med : 46.8em;
+// $bp-med-2 : 48em;
+
+// $bp-large : 50em;
+// $bp-large-2 : 54.5em;
+
+// $bp-xl : 60em;
+// $bp-xl-2 : 67em;
+
+$tablet-width: rem(768);
+$desktop-width: rem(1024);
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - rem(1)}){
+    @content;
+    // .visible-mobile {
+    //   display: block;
+    // }
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - rem(1)}) {
+    @content;
+    // .visible-mobile {
+    //   display: none;
+    // }
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+
+//Chris Coyer's retina mixin: http://css-tricks.com/snippets/css/retina-display-media-query/
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}

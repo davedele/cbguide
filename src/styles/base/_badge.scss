@@ -1,0 +1,844 @@
+
+
+// badge and statuses
+
+
+//statuses
+
+$status-text-color: #ffffff;
+//count items
+//----------
+$fade-color: $color-primary;
+//mix
+$end-color: $color-info;
+$start-color: $color-success;
+//hue
+$hue-color:  $color-info;
+//steps (starting from..)
+$step: 6;
+ 
+ .schedule-status {
+    border: 1px solid $color-info-light;
+    background-color: transparent;
+    color: $color-info;
+    padding: 2px 6px;
+ }
+
+.status {
+    color: white;
+    padding: 3px 9px;
+    font-size: 0.6875rem;
+    text-shadow: none;
+    background-color: #e6e6e6;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: $border-rad;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+
+.home-account-type {
+    color: $white;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    font-size: 0.9875rem;
+    text-shadow: none;
+    background-color: #e6e6e6;
+    font-weight: 500;
+    border-radius: $border-rad;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    
+// $color-success: #FD7C66;
+// $color-complete:#10cfbd;   //? rando
+// $color-primary: #199ddc;
+// $color-warning: #f8d053;
+// $color-danger: #f55753;
+// $color-info: #3b4752;   
+
+     //Corp
+    &--1 {
+        background-color: $color-success-light;
+        &:after {
+            content: "C";
+        }
+    }
+    
+    //Payfac
+    &--2 {
+        background-color: $color-success-lighter;
+        &:after {
+            content: "P";
+        }        
+    }
+    
+    //Resller
+    &--3 {
+        background-color: $color-success;
+        &:after {
+            content: "R";
+        }               
+    }
+    
+    //Var
+    &--4 {
+        background-color: $color-complete-lighter;
+        &:after {
+            content: "V";
+        }               
+    }
+    
+    //Merchant Account
+    &--5 {
+        background-color: $color-complete;
+        &:after {
+            content: "M";
+        }               
+    }
+    
+    //Location
+    &--6 {
+        background-color: $color-complete-light;
+        &:after {
+            content: "L";
+        }               
+    }
+    
+}
+
+// Account meta
+//Corporate
+.meta {
+    .home-account-type {
+
+          //Corp
+        &--1 {
+            background-color: $color-success-light;
+            &:after {
+                content: "C";
+            }
+        }
+        
+        //Payfac
+        &--2 {
+            background-color: $color-success-lighter;
+            &:after {
+                content: "P";
+            }        
+        }
+        
+        //Resller
+        &--3 {
+            background-color: $color-success;
+            &:after {
+                content: "R";
+            }               
+        }
+        
+        //Var
+        &--4 {
+            background-color: $color-complete-lighter;
+            &:after {
+                content: "V";
+            }               
+        }
+        
+        //Merchant Account
+        &--5 {
+            background-color: $color-complete-light;
+            &:after {
+                content: "M";
+            }               
+        }
+        
+        //Location
+        &--6 {
+            background-color: $color-complete;
+            &:after {
+                content: "L";
+            }               
+        }
+    }
+}
+
+//Webhooks
+.wh-status {
+    @extend .status;
+    
+    //active
+    &--0 {
+        background-color: $color-primary-light;
+        &:after {
+            content: "Active";
+        }
+    }
+    
+    //pending
+    &--1 {
+        background-color: $color-info-light;
+        &:after {
+            content: "Pending";
+        }        
+    }
+    
+    //disabled
+    &--2 {
+        background-color: $gray-dark;
+        &:after {
+            content: "Disabled";
+        }               
+    }    
+}
+
+
+//count items    
+@while $step <=9 {
+    // td:nth-child(#{$step}) .status.wh-status--count {
+    //     background-color: transparentize($fade-color, (($step * .019) * 5));
+    // }
+    
+    // moves color around color wheel
+    // td:nth-child(#{$step}) .status.wh-status--count {
+    //     background-color: adjust-hue($hue-color, $step*4);
+    // }
+
+    //changes from one color to another
+    td:nth-child(#{$step}) .status.wh-status--count {
+        background-color: adjust-hue($color-primary, $step * 10%);
+    }
+      
+    $step: $step + 1;
+
+}
+
+
+
+
+//Users
+.user-status {
+    @extend .status;
+    
+    //invited
+    &--0 {
+        background-color: $color-complete-light;
+        &:after {
+            content: "Invited";
+        }
+    }
+    
+    //active
+    &--1 {
+        background-color: $color-primary-light;
+        &:after {
+            content: "Active";
+        }        
+    }
+    
+    //rejected
+    &--2 {
+        background-color: $gray-dark;
+        &:after {
+            content: "Rejected";
+        }               
+    }
+   
+    //deleted
+    &--4 {
+        background-color: $gray;
+        &:after {
+            content: "Deleted";
+        }               
+    }
+    
+    //expired
+    &--5 {
+        background-color: $color-danger-light;
+        &:after {
+            content: "Expired";
+        }               
+    }
+}
+
+
+
+//Accounts
+//--status
+.account-status {
+    @extend .status;
+    
+    //active
+    &--0 {
+        background-color: $color-primary-light;
+        &:after {
+            content: "Active";
+        }
+    }
+    
+    //suspended
+    &--1 {
+        background-color: $color-danger;
+        &:after {
+            content: "Suspended";
+        }        
+    }
+    
+    //deleted
+    &--2 {
+        background-color: $gray-dark;
+        &:after {
+            content: "Deleted";
+        }               
+    } 
+}
+//--type
+.account-type {
+    @extend .status;
+
+       //Corp
+    &--1 {
+        background-color: $color-success-light;
+        &:after {
+            content: "C";
+        }
+    }
+    
+    //Payfac
+    &--2 {
+        background-color: $color-success-lighter;
+        &:after {
+            content: "P";
+        }        
+    }
+    
+    //Resller
+    &--3 {
+        background-color: $color-success;
+        &:after {
+            content: "R";
+        }               
+    }
+    
+    //Var
+    &--4 {
+        background-color: $color-complete-lighter;
+        &:after {
+            content: "V";
+        }               
+    }
+    
+    //Merchant Account
+    &--5 {
+        background-color: $color-complete-light;
+        &:after {
+            content: "M";
+        }               
+    }
+    
+    //Location
+    &--6 {
+        background-color: $color-complete-light;
+        &:after {
+            content: "L";
+        }               
+    }
+}
+
+//Locations
+.location-status {
+    @extend .status;
+    
+    //Live
+    &--1 {
+        background-color: $color-success-light;
+        &:after {
+            content: "Live";
+        }
+    }
+    
+    //deleted
+    &--2 {
+        background-color: $gray-dark;
+        &:after {
+            content: "Deleted";
+        }        
+    }
+    
+    //on_hold
+    &--3 {
+        background-color: $color-warning;
+        &:after {
+            content: "On-hold";
+        }               
+    }
+    
+     //pending
+    &--4 {
+        background-color: $color-info-light;
+        &:after {
+            content: "Pending";
+        }               
+    }
+    
+     //closing
+    &--5 {
+        background-color:  $color-info-light;
+        &:after {
+            content: "Closing";
+        }               
+    }
+}
+
+
+
+
+
+//customers
+.customer-status {
+    @extend .status;
+    
+    //active
+    &--0 {
+        background-color: $color-primary-light;
+        &:after {
+            content: "Active";
+        }
+    }
+    
+    //cancelled
+    &--1 {
+        background-color: $color-info;
+        &:after {
+            content: "Deleted";
+        }        
+    }
+    
+    //deleted
+    &--2 {
+        background-color: $gray-dark;
+        &:after {
+            content: "Deleted";
+        }               
+    }
+    //suspended
+    &--3 {
+        background-color: $color-info;
+        &:after {
+            content: "Suspended";
+        }        
+    }
+}
+
+
+
+//Apis
+.api-status {
+    @extend .status;
+    
+    //active
+    &--A {
+        background-color: $color-primary-light;
+        &:after {
+            content: "Active";
+        }
+    }
+    
+    //pending
+    &--D {
+        background-color: $color-danger;
+        &:after {
+            content: "Deleted";
+        }        
+    }      
+}
+
+
+//transactions
+.transaction-type {
+    @extend .status;
+    
+    //Sale
+    &--10, &--20 {
+        background-color: $color-info;
+        &:after {
+            content: "Sale";
+        }
+    }
+    
+    //Authorize
+    &--11, &--21{
+        background-color: $color-info-light;
+        &:after {
+            content: "Authorize";
+        }        
+    }
+    
+    //Capture
+    &--12, &--22 {
+        background-color: $color-success;
+        &:after {
+            content: "Capture";
+        }               
+    }
+    
+     //Credit
+    &--13, &--23 {
+        background-color: $color-success-light;
+        &:after {
+            content: "Credit";
+        }               
+    }
+    
+     //Void
+    &--14, &--24 {
+        background-color: $color-complete;
+        &:after {
+            content: "Void";
+        }               
+    }
+    
+    
+    //Preauth
+    &--15 {
+        background-color: $color-complete-light;
+        &:after {
+            content: "Pre-auth";
+        }               
+    }
+    
+    //Inquiry
+    &--18 {
+        background-color: $color-primary-light;
+        &:after {
+            content: "Inquiry";
+        }               
+    }
+    
+    //Void
+    &--25 {
+        background-color: $color-info-dark;
+        &:after {
+            content: "Force";
+        }               
+    }
+    
+    //ATM Verify
+    &--26 {
+        background-color: $color-success;
+        &:after {
+            content: "ATM Verify";
+        }               
+    }
+    
+    //One-time token
+    &--30 {
+        background-color: $color-primary-light;
+        &:after {
+            content: "One-time token";
+        }               
+    }
+}
+
+.transaction-status {
+    @extend .status;
+    
+        &--ready {
+        background-color: $color-success; 
+        }
+        
+        &--authorized {
+        background-color: $color-success-light; 
+        }
+        
+        &--review {
+        background-color: $color-primary; 
+        }
+        
+        &--complete {
+        background-color: $color-primary-light; 
+        }
+        
+        &--voided, &--VOIDED {
+        background-color: $color-primary-dark; 
+        }
+        
+        &--received {
+        background-color: $color-info;
+        }
+        
+        &--declined {
+        background-color: $color-danger;  
+        }
+        
+         &--failed {
+        background-color: $color-danger-light;  
+        }
+        
+        &--settled,  &--settling{
+        background-color: $color-complete;  
+        }
+        
+        
+        // history action
+        &--Received, &--funded {
+        background-color: $color-complete-light;  
+        }
+        
+        &--Void {
+        background-color: $color-warning;  
+        }
+    
+}
+
+//Cfo
+.cfo-status {
+    @extend .status;
+    
+    //active
+    &--A, &--a {
+        background-color:  $color-primary-light;
+        &:after {
+            content: "Active";
+        }
+    }
+    
+    //suspended
+    &--s, &--S {
+        background-color: $color-info-light;
+        &:after {
+            content: "Suspended";
+        }        
+    }  
+    
+    //suspended
+    &--m, &--M {
+        background-color: $color-success;
+        &:after {
+            content: "Master";
+        }        
+    } 
+    
+    //suspended
+    &--d, &--D {
+        background-color: $color-success-light;
+        &:after {
+            content: "Deleted";
+        }        
+    }       
+}
+
+
+
+//cfo query
+.cfo-query {
+    @extend .status;
+    
+    &--r, &--R {
+         background-color: $color-info;
+        &:after {
+            content: "Received";
+        }
+    }
+    
+    //settled
+    &--s, &--S {
+         background-color: $color-info-light;
+        &:after {
+            content: "settled";
+        }        
+    }      
+}
+
+
+//cfo report
+.cfo-report {
+    @extend .status;
+    
+    //active
+    &--A {
+        background-color: $color-primary-light;
+        &:after {
+            content: "Active";
+        }
+    }
+    
+    //pending
+    &--D {
+        background-color: $color-danger;
+        &:after {
+            content: "Deleted";
+        }        
+    } 
+
+    
+    &--C, &--C {
+        background-color: transparent;
+        border: 1px solid $color-primary-light;
+        color: $color-primary-light;
+        &:after {
+            content: "Delimited";
+        }        
+    }
+
+    &--f, &--F {
+        background-color: transparent;
+        border: 1px solid $color-primary-light;
+        color: $color-primary-light;
+        &:after {
+            content: "Fixed";
+        }        
+    }            
+}
+
+
+
+//Cfo
+.mapp-status {
+    @extend .status;
+    
+
+    &.s1 {
+        background-color: $color-success;
+        &:after {
+            content: "Approved";
+        }
+    }
+    
+  
+    &.s2 {
+        background-color: $color-success-light;
+        &:after {
+            content: "Open";
+        }        
+    }  
+    
+
+    &.s3 {
+        background-color: $color-info;
+        &:after {
+            content: "Pending";
+        }        
+    } 
+      
+    &.s4 {
+        background-color: $color-warning-light;
+        &:after {
+            content: "Recalled";
+        }        
+    }
+
+     &.s5 {
+        background-color: $color-complete;
+        &:after {
+            content: "Submitted";
+        }        
+    }  
+     &.s6 {
+        background-color: $color-complete-light;
+        &:after {
+            content: "Conditional";
+        }        
+    }    
+     &.s7 {
+        background-color: $color-danger-light;
+        &:after {
+            content: "Declined";
+        }        
+    } 
+     &.s8 {
+        background-color: $color-info;
+        &:after {
+            content: "Processing";
+        }        
+    } &.s9 {
+        background-color: $color-warning;
+        &:after {
+            content: "Deleted";
+        }        
+    }
+     &.s10 {
+        background-color: $color-warning-light;
+        &:after {
+            content: "Tentative";
+        }        
+    }
+     &.s11 {
+        background-color: $color-primary-light;
+        &:after {
+            content: "Enrolled";
+        }        
+    }
+}
+
+
+
+
+.color-suc {
+    color: $white;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    font-size: 0.9875rem;
+    text-shadow: none;
+    text-transform: uppercase;
+    background-color: #e6e6e6;
+    font-weight: 500;
+    border-radius: $border-rad;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    &.aa{
+        background: $color-success;
+    }
+    &.a{
+        background: $color-success-light;
+    }
+
+    &.b{
+        background: $color-success-lighter;
+    }
+
+    &.c{
+        background: $color-complete-light;
+    }
+
+    &.d{
+        background: $color-complete-light;
+    }
+}
+
+
+
+.color-pri {
+    color: $white;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    font-size: 0.9875rem;
+    text-shadow: none;
+    text-transform: uppercase;
+    background-color: #e6e6e6;
+    font-weight: 500;
+    border-radius: $border-rad;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    &.aa{
+        background: $color-primary;
+    }
+    &.a{
+        background: $color-primary-light;
+    }
+
+    &.b{
+        background: $color-primary-lighter;
+    }
+
+    &.c{
+        background: $color-primary-dark;
+    }
+
+    &.d{
+        background: $color-primary-darker;
+    }
+}
+

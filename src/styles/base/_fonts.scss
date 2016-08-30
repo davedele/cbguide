@@ -1,0 +1,28 @@
+//
+// Font styles.
+//
+//
+// Font-icon  **switch to svg.. 
+//Let icons inherit the body line-height
+.lnr {
+    line-height: inherit;
+}
+
+// right justified chevrons 
+.lnr-chevron-down {
+    margin-left: $block-eighth;
+    font-weight: $semibold;
+    font-size: rem(16);
+    color: $black;
+}
+
+.material-icons {
+    color: $mIcon-color;
+    cursor: pointer;
+    line-height: inherit !important;
+
+    // &:hover {
+    //     color: $color-primary;
+    //     @include transition(all .3 ease);
+    // }
+}
